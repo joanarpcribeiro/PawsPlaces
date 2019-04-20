@@ -8,12 +8,24 @@
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
+ <nav>
+    <a href="/">Home</a>   
+    {{!-- Falta fazer do home um logo. --}}
+    {{#if isConnected}}
+    <a href="/views/paws/profile-edit.hbs">Profile</a>
+    {{!-- vai ser para colocar o {{nome}} do user --}}
+    <a href="/views/paws/sign-out.hbs">Sign Out</a>
+    {{/if}}
 
-  <nav>
-    <a href="/">Home</a>
-    <a href="/auth/login">Login</a>
-    <a href="/auth/signup">Signup</a>
+    {{#if !isConnected}}
+    <a href="/auth/edit-profile">Edit Profile</a>
     <a href="/auth/logout">Logout</a>
+    <a href="/all-users">Users</a>
+   
+    {{else}}
+    <a href="/auth/login">Login</a>
+    {{/if}}
+    
   </nav>
 
   {{{body}}}
