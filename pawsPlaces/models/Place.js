@@ -14,7 +14,7 @@ const placeSchema = new Schema({
   },
   postCode: String,
   neighbourhood: String,
-  pictureUrl: String,
+  pictureURL: String,
   contactNumb: Number,
   websiteURL: String,
   category: String,
