@@ -3,10 +3,12 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
+  email: String,
   password: String,
   role:{
     type: String,
-    enum: ['SIMPLE_USER', 'ADMIN']
+    default: "User"
+    // mais tarde podemos adicionar ADMIN
   }
 }, {
   timestamps: {

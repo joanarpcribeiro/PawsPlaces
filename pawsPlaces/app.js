@@ -73,8 +73,19 @@ app.use(session({
 }))
 app.use(flash());
 require('./passport')(app);
-    
 
+app.use((req,res,next) => {
+  // Define a view variable named `isConnected`
+  // res.locals.isConnected = !!req.user 
+
+  // // Define a view variable named `connectedUser`
+  // res.locals.connectedUser = req.user
+
+  // Define a view variable named `isConnected`
+  res.locals.isConnected = req.user && req.user.role === 'User'
+  next()
+})
+    
 const index = require('./routes/index');
 app.use('/', index);
 

@@ -372,10 +372,12 @@ Place.deleteMany()
 let users = [
   {
     username: "alice",
+    email: "alice@hotmail.com",
     password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
   },
   {
     username: "bob",
+    email: "bob@hotmail.com",
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
   }
 ]

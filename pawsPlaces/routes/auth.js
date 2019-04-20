@@ -8,32 +8,35 @@ const bcrypt = require("bcrypt");
 const bcryptSalt = 10;
 
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login", { "message": req.flash("error") });
+router.get("/sign-in", (req, res, next) => {
+  res.render("paws/sign-in", { "message": req.flash("error") });
 });
 
-router.post("/login", passport.authenticate("local", {
+router.post("/sign-in", passport.authenticate("local", {
   successRedirect: "/",
-  failureRedirect: "/auth/login",
+  failureRedirect: "/paws/sign-in",
   failureFlash: true,
   passReqToCallback: true
 }));
 
-router.get("/signup", (req, res, next) => {
-  res.render("auth/signup");
+router.get("/sign-up", (req, res, next) => {
+  res.render("paws/sign-up");
 });
 
-router.post("/signup", (req, res, next) => {
+router.post("/sign-up", (req, res, next) => {
+  console.log('wat');
   const username = req.body.username;
   const password = req.body.password;
+  // const role = req.body.role;
   if (username === "" || password === "") {
-    res.render("auth/signup", { message: "Indicate username and password" });
+    // console.log("fora do if")
+    res.render("paws/sign-up", { message: "Indicate username and password" });
     return;
   }
 
   User.findOne({ username }, "username", (err, user) => {
     if (user !== null) {
-      res.render("auth/signup", { message: "The username already exists" });
+      res.render("paws/sign-up", { message: "The username already exists" });
       return;
     }
 
@@ -42,20 +45,20 @@ router.post("/signup", (req, res, next) => {
 
     const newUser = new User({
       username,
-      password: hashPass
+      password: hashPass,
     });
 
     newUser.save()
-    .then(() => {
-      res.redirect("/");
-    })
-    .catch(err => {
-      res.render("auth/signup", { message: "Something went wrong" });
-    })
+      .then(() => {
+        res.redirect("/");
+      })
+      .catch(err => {
+        res.render("paws/sign-up", { message: "Something went wrong" });
+      })
   });
 });
 
-router.get("/logout", (req, res) => {
+router.get("/sign-out", (req, res) => {
   req.logout();
   res.redirect("/");
 });

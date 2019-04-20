@@ -1,8 +1,12 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0; }
 
 a {
-  color: #00B7FF; }
+  color: black; }
+
+button:hover {
+  border: 1px solid white;
+  background-color: #9e7c7c; }
 
 /*# sourceMappingURL=style.css.map */
