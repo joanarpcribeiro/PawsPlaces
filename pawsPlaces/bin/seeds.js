@@ -124,7 +124,7 @@ const places = [
     address: "R. de Belém 2",
     postCode: "1300-004",
     neighbourhood: "Lisbon",
-    pictureURL: "/images/J/belem-2-a-8.jpg" ,
+    pictureURL: "/images/J/belem-2-a-8.jpg",
     contactNumb: 213639055,
     websiteURL: "http://restaurantebelem2a8.com/", 
     category: "Restaurant",
