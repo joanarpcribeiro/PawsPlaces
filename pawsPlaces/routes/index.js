@@ -10,7 +10,7 @@ const {isConnected, isAdmin, isNotRegister} = require('../middlewares')
 
 /* GET home page */
  router.get('/', (req, res, next) => {
-   Place.find()
+   Place.find().limit(6)
    .then(places =>{
      res.render('paws/home-page', {places});
    })
