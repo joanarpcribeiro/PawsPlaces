@@ -5,12 +5,9 @@ const userSchema = new Schema({
   username: String,
   email: {
     type: String,
-    match: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+    // match: "/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i"
   },
-  password: {
-    type: String,
-    match: "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
-  },
+  password: String,
   name: String,
   location: {
     type: String,
