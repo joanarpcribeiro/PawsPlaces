@@ -80,7 +80,7 @@ const places = [
     address: "Lx Factory, Building E, R. Rodrigues de Faria 103",
     postCode: "1300-501",
     neighbourhood: "Lisbon",
-    pictureURL: "/images/J/CaféDaFabrica.jpg",
+    pictureURL: "/images/J/CafeDaFabrica.jpg",
     contactNumb: 214011807,
     websiteURL: "https://www.facebook.com/cafedafabrica/", 
     category: "Restaurant",
