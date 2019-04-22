@@ -11,7 +11,7 @@ const Place = require("../models/Place")
 const bcryptSalt = 10;
 
 mongoose
-  .connect('mongodb://localhost/pawsplaces', {useNewUrlParser: true})
+  .connect('mongodb://localhost/pawsplaces', { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -38,18 +38,18 @@ const places = [
     neighbourhood: "Lisboa",
     pictureURL: "/images/J/Kaffeehaus.jpg",
     contactNumb: 210956828,
-    websiteURL: "http://www.kaffeehaus-lisboa.com/", 
+    websiteURL: "http://www.kaffeehaus-lisboa.com/",
     category: "Restaurant",
-    warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always." ,
+    warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always.",
   },
   {
     name: "Boutik",
     address: "Rua de Sao Bento, 106D",
-    postCode:  "1200-816",
+    postCode: "1200-816",
     neighbourhood: "Lisbon",
     pictureURL: "/images/J/Boutik.jpg",
     contactNumb: 213960773,
-    websiteURL: "https://www.boutiklisboa.com/", 
+    websiteURL: "https://www.boutiklisboa.com/",
     category: "Restaurant",
     warning: "Not suitable for dogs that don't feel comfortable around other people/dogs",
   },
@@ -60,7 +60,7 @@ const places = [
     neighbourhood: "Lisbon",
     pictureURL: "/images/J/QuiosqueAvenidaDeRoma.jpg",
     contactNumb: 927376619,
-    websiteURL: "https://www.facebook.com/quiosqueavenidaroma", 
+    websiteURL: "https://www.facebook.com/quiosqueavenidaroma",
     category: "Restaurant",
     warning: "This is an outdoor café. Be aware that there are roads nearby, keep your dog on a leash always.",
   },
@@ -68,21 +68,21 @@ const places = [
     name: "Noobai",
     address: "Miradouro de Santa Catarina (Adamastor)",
     postCode: "1200-401",
-    neighbourhood:"Lisbon",
-    pictureURL: "/images/J/Noobai.jpg" ,
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/J/Noobai.jpg",
     contactNumb: 213465014,
-    websiteURL: "http://www.noobaicafe.com/", 
+    websiteURL: "http://www.noobaicafe.com/",
     category: "Restaurant",
     warning: "This is an outdoor café. Be aware that there are roads nearby, keep your dog on a leash always.",
   },
   {
-    name: "Café  na Fábrica -  Lx Factory" ,
+    name: "Café  na Fábrica -  Lx Factory",
     address: "Lx Factory, Building E, R. Rodrigues de Faria 103",
     postCode: "1300-501",
     neighbourhood: "Lisbon",
     pictureURL: "/images/J/CafeDaFabrica.jpg",
     contactNumb: 214011807,
-    websiteURL: "https://www.facebook.com/cafedafabrica/", 
+    websiteURL: "https://www.facebook.com/cafedafabrica/",
     category: "Restaurant",
     warning: "none",
   },
@@ -90,10 +90,10 @@ const places = [
     name: "Cozinha Popular da Mouraria",
     address: "Rua das Olarias, 5",
     postCode: "1100-377",
-    neighbourhood:"Lisbon",
-    pictureURL: "/images/J/CozinhaPopulardaMourria.jpg" ,
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/J/CozinhaPopulardaMourria.jpg",
     contactNumb: 926520568,
-    websiteURL: "https://www.facebook.com/CozinhaPopularDaMouraria", 
+    websiteURL: "https://www.facebook.com/CozinhaPopularDaMouraria",
     category: "Restaurant",
     warning: "none",
   },
@@ -104,18 +104,18 @@ const places = [
     neighbourhood: "Algés",
     pictureURL: "/images/J/OVilhao.jpg",
     contactNumb: 210191305,
-    websiteURL: "https://www.zomato.com/pt/grande-lisboa/o-vilh%C3%A3o-alg%C3%A9s-lisboa/photos?category=all" , 
+    websiteURL: "https://www.zomato.com/pt/grande-lisboa/o-vilh%C3%A3o-alg%C3%A9s-lisboa/photos?category=all",
     category: "Restaurant",
-    warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always. Always contact the place directly, to confirm details are up to date." ,
+    warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always. Always contact the place directly, to confirm details are up to date.",
   },
   {
     name: "28 Café",
-    address: "Rua de Santa Cruz do Castelo number 45 to 47A" ,
+    address: "Rua de Santa Cruz do Castelo number 45 to 47A",
     postCode: "1100-479",
     neighbourhood: "Lisbon",
     pictureURL: "/images/J/28Cafe.jpg",
     contactNumb: 218860119,
-    websiteURL: "https://www.facebook.com/28cafelisboa-173095969514482/" , 
+    websiteURL: "https://www.facebook.com/28cafelisboa-173095969514482/",
     category: "Restaurant",
     warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always. Always contact the place directly, to confirm details are up to date.",
   },
@@ -126,15 +126,15 @@ const places = [
     neighbourhood: "Lisbon",
     pictureURL: "/images/J/belem-2-a-8.jpg",
     contactNumb: 213639055,
-    websiteURL: "http://restaurantebelem2a8.com/", 
+    websiteURL: "http://restaurantebelem2a8.com/",
     category: "Restaurant",
-    warning: "Always contact the place directly, to confirm details are up to date." ,
+    warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
     name: "TRYP Lisboa Oriente Hotel",
-    address: "Av. D. João II Lote 1.16 02.B" ,
-    postCode: "1990-083" ,
-    neighbourhood: "Lisbon" ,
+    address: "Av. D. João II Lote 1.16 02.B",
+    postCode: "1990-083",
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/TrypLisboaOrienteHotel.jpg",
     contactNumb: 218930000,
     websiteURL: "https://www.tryporiente.com/",
@@ -143,9 +143,9 @@ const places = [
   },
   {
     name: "InterContinental Lisbon",
-    address: "Rua Castilho, 149" ,
+    address: "Rua Castilho, 149",
     postCode: "1099-034",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/InterContinentalLisbon.jpg",
     contactNumb: 213818700,
     websiteURL: "https://www.ihg.com/intercontinental/",
@@ -165,9 +165,9 @@ const places = [
   },
   {
     name: "Novotel Lisboa",
-    address: " Avenida José Malhoa 1 1A" ,
+    address: " Avenida José Malhoa 1 1A",
     postCode: "1099-051",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/NovotelLisboa.jpg",
     contactNumb: 217244800,
     websiteURL: "https://www.accorhotels.com/gb/hotel-0784-novotel-lisboa/index.shtml",
@@ -176,9 +176,9 @@ const places = [
   },
   {
     name: "Residencial João XXI",
-    address: "Rua Gomes Freire 179, 1" ,
+    address: "Rua Gomes Freire 179, 1",
     postCode: "1150-177",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/ResidencialJoaoXXI.jpeg",
     contactNumb: 213155018,
     websiteURL: "http://www.joaoxxiresidencial.com/",
@@ -187,9 +187,9 @@ const places = [
   },
   {
     name: "Chiado InSuites 100",
-    address: "R. do Carmo 27" ,
+    address: "R. do Carmo 27",
     postCode: "1200-093",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/ChiadoInSuites100.JPEG",
     contactNumb: 000000,
     websiteURL: "http://www.chiadoinsuites100.spotportugal-pt.site/",
@@ -198,9 +198,9 @@ const places = [
   },
   {
     name: "Alfama Patio Hostel",
-    address: "Escolas Gerais 3, Patio dos Quintalinhos, 1" ,
+    address: "Escolas Gerais 3, Patio dos Quintalinhos, 1",
     postCode: "1100-213",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/AlfamaPatioHostel.jpeg",
     contactNumb: 218883127,
     websiteURL: "https://www.facebook.com/pages/Alfama-Patio-Hostel/123631741046292",
@@ -209,9 +209,9 @@ const places = [
   },
   {
     name: "Pensão São João da Praca",
-    address: "R. de São João da Praça, 97" ,
+    address: "R. de São João da Praça, 97",
     postCode: "1100-585",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/PensaoSaoJoaoDaPraca.jpg",
     contactNumb: 218862591,
     websiteURL: "https://www.booking.com/hotel/pt/pensao-sao-joao-da-praca.html",
@@ -220,9 +220,9 @@ const places = [
   },
   {
     name: "Portuguese Living Castelo",
-    address: "Travessa do Chão da Feira 11, rés-do-chão" ,
+    address: "Travessa do Chão da Feira 11, rés-do-chão",
     postCode: "1100-104",
-    neighbourhood: "Santa Maria Maior, Lisbon" ,
+    neighbourhood: "Santa Maria Maior, Lisbon",
     pictureURL: "/images/J/PortugueseLivingCastelo.jpg",
     contactNumb: 211914457,
     websiteURL: "http://www.portugueseliving.com/Lisbon-Apartment-Castelo-Terrace.html",
@@ -231,9 +231,9 @@ const places = [
   },
   {
     name: "Carcavelos Surf Hostel",
-    address: "Rua Lourenço Marques, 5" ,
+    address: "Rua Lourenço Marques, 5",
     postCode: "2775-601",
-    neighbourhood: "Cascais" ,
+    neighbourhood: "Cascais",
     pictureURL: "/images/J/CarcavelosSurfHostel.jpeg",
     contactNumb: 911928003,
     websiteURL: "http://carcavelossurfhostel.com/",
@@ -242,9 +242,9 @@ const places = [
   },
   {
     name: "Clínica Veterinária João XXI",
-    address: "Av. João xxi, 18 c/v" ,
+    address: "Av. João xxi, 18 c/v",
     postCode: "1000-302",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/ClinicaVeterinariaJoaoXXI.png",
     contactNumb: 218489230,
     websiteURL: "http://www.clinicaveterinaria.com.pt/",
@@ -253,9 +253,9 @@ const places = [
   },
   {
     name: "Clínica Veterinária Alta de Lisboa",
-    address: "R. Helena Vaz da Silva, 4C" ,
+    address: "R. Helena Vaz da Silva, 4C",
     postCode: "1750-429",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/ClinicaVeterinariaDeLisboa.jpeg",
     contactNumb: 217552868,
     websiteURL: "http://www.vet-altalisboa.pt/",
@@ -264,9 +264,9 @@ const places = [
   },
   {
     name: "LowCost Veterinários",
-    address: "Rua Artilharia 1, 118" ,
+    address: "Rua Artilharia 1, 118",
     postCode: "1070-293",
-    neighbourhood: "Lisboa" ,
+    neighbourhood: "Lisboa",
     pictureURL: "/images/J/LowcostVeterinarios.jpeg",
     contactNumb: 212255084,
     websiteURL: "www.lowcostveterinarios.pt",
@@ -275,9 +275,9 @@ const places = [
   },
   {
     name: "CoolVet",
-    address: "R. Borges Grainha 11" ,
+    address: "R. Borges Grainha 11",
     postCode: "1170-302",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/CoolVet.png",
     contactNumb: 218122486,
     websiteURL: "https://www.facebook.com/CoolVetCentroVeterinario/",
@@ -286,9 +286,9 @@ const places = [
   },
   {
     name: "Clínica Veterinária Restelo Vet",
-    address: "R. Duarte Pacheco Pereira 5A-B" ,
+    address: "R. Duarte Pacheco Pereira 5A-B",
     postCode: "1400-139",
-    neighbourhood: "Lisboa" ,
+    neighbourhood: "Lisboa",
     pictureURL: "/images/J/ResteloVet.jpeg",
     contactNumb: 213011370,
     websiteURL: "http://www.restelovet.pt/",
@@ -297,9 +297,9 @@ const places = [
   },
   {
     name: "Hospital Veterinário de Lisboa",
-    address: "123 Rua Manuel Rodrigues da Silva, 2 B/C " ,
+    address: "123 Rua Manuel Rodrigues da Silva, 2 B/C ",
     postCode: "1600-503",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/HospitalVeterinarioDeLisboa.png",
     contactNumb: 217168548,
     websiteURL: "https://hospitalveterinario.eu/",
@@ -310,7 +310,7 @@ const places = [
     name: "Veterinary Hospital Restelo",
     address: "R. Gregório Lopes Lote 1513 - Store E",
     postCode: "1400-195",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/HospitalVeterinarioDoRestelo.png",
     contactNumb: 213032119,
     websiteURL: "https://www.hospitalveterinario.pt/en/home",
@@ -319,9 +319,9 @@ const places = [
   },
   {
     name: "Hospital Veterinário de São Bento",
-    address: "R. de São Bento 358-A" ,
-    postCode:  "1200-822",
-    neighbourhood: "Lisbon" ,
+    address: "R. de São Bento 358-A",
+    postCode: "1200-822",
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/HotpitalVeterinarioDeSaoBento.png",
     contactNumb: 213972997,
     websiteURL: "https://veterinario.pt/",
@@ -330,9 +330,9 @@ const places = [
   },
   {
     name: "Hospital Veterinário da Estefânia",
-    address: "R. Alm. Barroso 17 A" ,
+    address: "R. Alm. Barroso 17 A",
     postCode: "1000-012",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/HospitalVeterinarioDaEstefania.jpeg",
     contactNumb: 213515030,
     websiteURL: "https://www.facebook.com/pages/Hospital-Veterinario-da-Estefania/223335257797501",
@@ -341,33 +341,176 @@ const places = [
   },
   {
     name: "Hospital Veterinário Laranjeiras",
-    address: "R. São Tomás de Aquino 8C" ,
+    address: "R. São Tomás de Aquino 8C",
     postCode: "1600-223",
-    neighbourhood: "Lisbon" ,
+    neighbourhood: "Lisbon",
     pictureURL: "/images/J/HospitalVeterinarioDasLaranjeiras.jpeg",
     contactNumb: 217270945,
     websiteURL: "https://www.vetlaranjeiras.com/m/pt/home/",
     category: "Hospital",
-    warning: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
+    websiteURL: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
+  },
+  {
+    name: "CP",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Mainland Portugal",
+    pictureURL: "/images/D/cp.jpg",
+    contactNumb: 707210220,
+    websiteURL: "https://www.cp.pt/passageiros/en",
+    category: "Public transports - train",
+    warning: "The transportation of unconditioned dogs is allowed through the purchase of a proper transport ticket, corresponding to the train you use, in the following trains: Alfa Pendular e Intercidades: requires payment of a full ticket; Regional e InterRegional: requires payment of half a ticket. In the urban trains of Lisbon, Porto and Coimbra the transportation is free. Under these conditions, the animal must be properly muzzled, with a short leash, accompanied by its up-to-date vaccination record and the relevant permit. To ensure the welfare and comfort of all Customers, the animal can not occupy a seat in the train."
+  },
+  {
+    name: "Carris",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Lisbon district",
+    pictureURL: "/images/D/carris.png",
+    contactNumb: 213613000,
+    websiteURL: "http://www.carris.pt/en/home/",
+    category: "Public transports - Metro, bus and tramway",
+    warning: "Animals are only allowed if they are properly packed. Properly packaged transport is understood to mean transportation in clean, well-maintained containers, made of durable, washable, easily disinfected and watertight material. These boxes must be transported as hand-luggage and placed in designated places. Transport of dangerous or potentially dangerous animals is not permitted."
+  },
+  {
+    name: "Rede Expressos",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Mainland Portugal",
+    pictureURL: "/images/D/rede-expressos.jpg",
+    contactNumb: 707223344,
+    websiteURL: "https://www.rede-expressos.pt/en",
+    category: "Public transports - Express Bus",
+    warning: "Pets allowed only properly packed in appropriate box and present in proper state of health and hygiene. Subject to the payment of half a ticket for the trip to be made. The animal can not occupy a seat in the bus. Only small animals which, due to their size, weight and characteristics, can be properly packed in the appropriate places and do not constitute a risk or inconvenience to other passengers."
+  },
+  {
+    name: "Fertagus",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Lisbon district - North/South Railway Axis",
+    pictureURL: "/images/D/fertagus.jpg",
+    contactNumb: 211066363,
+    websiteURL: "https://www.fertagus.pt/en",
+    category: "Public transports - Train",
+    warning: "Passengers are allowed to carry pet animals free of charge provided that they are properly enclosed in an appropriate container that can be transported as a hand volume. Each passenger is only allowed to carry one animal. It is also permissible to transport dogs not enclosed outside the peak hours, provided they do not fall into the category of dangerous or potentially dangerous breeds, are properly muzzled, contained on the short leash and accompanied by their updated Vaccine Bulletin and its license. Hazardous and potentially dangerous animals, as defined in their own legislation, can not be displaced by public transport."
+  },
+  {
+    name: "Transtejo Soflusa",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Lisbon district",
+    pictureURL: "/images/D/ttsl.jpg",
+    contactNumb: 808203050,
+    websiteURL: "https://ttsl.pt/",
+    category: "Public transports - Ship",
+    warning: "Animals must be conditioned in a box or similar, or with out it but properly muzzled and with a short leash, so as not to disturb or frighten other passengers. The animals should be in an adequate state of health and hygiene and should not show obvious signs of contagious and parasitic disease. Only one pet is allowed per passenger. The pet may not occupy a sitting position (including the transport box). Animals weighing less than 5 kg do not pay a ticket."
+  },
+  {
+    name: "Rodoviária de Lisboa",
+    address: "not available",
+    postCode: "not available",
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/D/rl.png",
+    contactNumb: 217928180,
+    websiteURL: "https://www.rodoviariadelisboa.pt/#tab0",
+    category: "Public transports - Bus",
+    warning: "Passengers are allowed to transport pet animals free of charge provided they are properly enclosed in an appropriate container that can be transported as a hand luggage."
+  },
+  {
+    name: "Ornimundo do Campo Pequeno",
+    address: "Centro de Lazer Campo Pequeno, Loja 124",
+    postCode: "1000-082",
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/D/ornimundo.jpg",
+    contactNumb: 210437832,
+    websiteURL: "https://www.ornimundo.com/pt/",
+    category: "Pet shop",
+    warning: "Open everyday from 10am until 11pm"
+  },
+  {
+    name: "Ornimundo de Lisboa",
+    address: "Gare do Oriente, Lojas G117 e G118 - Av. João II, Estação do Oriente, Lote 1.15",
+    postCode: "1990-233",
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/D/ornimundo.jpg",
+    contactNumb: 218941186,
+    websiteURL: "https://www.ornimundo.com/pt/",
+    category: "Pet shop",
+    warning: "Open everyday from 10am until 11pm"
+  },
+  {
+    name: "PETOUTLET – LISBOA-ROMA",
+    address: "Rua Dr.Gama Barros Nº 25-A",
+    postCode: "1700-143",
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/D/petoutlet.png",
+    contactNumb: 935893451,
+    websiteURL: "https://www.petoutlet.pt/",
+    category: "Pet shop",
+    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+  },
+  {
+    name: "PETOUTLET – LISBOA-FANQUEIROS",
+    address: "Rua dos Fanqueiros, Nº208",
+    postCode: "1149-031",
+    neighbourhood: "Lisbon",
+    pictureURL: "/images/D/petoutlet.png",
+    contactNumb: 934034213,
+    websiteURL: "https://www.petoutlet.pt/",
+    category: "Pet shop",
+    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+  },
+  {
+    name: "PETOUTLET – OEIRAS",
+    address: "Rua de Macau nº32",
+    postCode: "2780-031",
+    neighbourhood: "Oeiras-Lisbon",
+    pictureURL: "/images/D/petoutlet.png",
+    contactNumb: 938566743,
+    websiteURL: "https://www.petoutlet.pt/",
+    category: "Pet shop",
+    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+  },
+  {
+    name: "Cabeleireiro do cão",
+    address: "Rua 4 de Outubro, Lj 7 -A, Bairro da Carochia",
+    postCode: "2620-206",
+    neighbourhood: "Ramada-Lisbon",
+    pictureURL: "/images/D/",
+    contactNumb: 936258503,
+    websiteURL: "http://cabeleireirodocao.com/",
+    category: "Dog grooming",
+    warning: "Monday to Saturday - 10am-1pm / 3pm-8pm - Sunday - closed"
+  },
+  {
+    name: "Pet & Cia",
+    address: "Av. Canto e Castro Lote46 Loja 4B",
+    postCode: "2700-782",
+    neighbourhood: "Amadora-Lisbon",
+    pictureURL: "/image/D/petcia.png",
+    contactNumb: 915255883,
+    websiteURL: "https://petecia.pt/",
+    category: "Dog grooming",
+    warning: "Require prior appointment - Everyday from 8am until 8pm"
   }
 ]
 
 Place.deleteMany()
-.then(() => {
-  return Place.create(places)
-})
-.then(placesCreated => {
-  console.log(`${placesCreated.length} places created with the following id:`);
-  console.log(placesCreated.map(u => u._id));
-})
-.then(() => {
-  // Close properly the connection to Mongoose
-  mongoose.disconnect()
-})
-.catch(err => {
-  mongoose.disconnect()
-  throw err
-})
+  .then(() => {
+    return Place.create(places)
+  })
+  .then(placesCreated => {
+    console.log(`${placesCreated.length} places created with the following id:`);
+    console.log(placesCreated.map(u => u._id));
+  })
+  .then(() => {
+    // Close properly the connection to Mongoose
+    mongoose.disconnect()
+  })
+  .catch(err => {
+    mongoose.disconnect()
+    throw err
+  })
 
 let users = [
   {
@@ -383,25 +526,25 @@ let users = [
     role: "NOT_REGISTER"
   },
   {
-    username:  "ADMIN",
+    username: "ADMIN",
     password: bcrypt.hashSync("ADMIN", bcrypt.genSaltSync(bcryptSalt)),
     role: "ADMIN"
   }
 ]
 
 User.deleteMany()
-.then(() => {
-  return User.create(users)
-})
-.then(usersCreated => {
-  console.log(`${usersCreated.length} users created with the following id:`);
-  console.log(usersCreated.map(u => u._id));
-})
-.then(() => {
-  // Close properly the connection to Mongoose
-  mongoose.disconnect()
-})
-.catch(err => {
-  mongoose.disconnect()
-  throw err
-})
+  .then(() => {
+    return User.create(users)
+  })
+  .then(usersCreated => {
+    console.log(`${usersCreated.length} users created with the following id:`);
+    console.log(usersCreated.map(u => u._id));
+  })
+  .then(() => {
+    // Close properly the connection to Mongoose
+    mongoose.disconnect()
+  })
+  .catch(err => {
+    mongoose.disconnect()
+    throw err
+  })
