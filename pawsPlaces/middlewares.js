@@ -7,6 +7,11 @@ module.exports = {
     if (req.user) next()
     else res.redirect('/sign-in')
   },
+  checkAdmin: (req,res,next) => {
+    if(req.user && req.user.role === "ADMIN")
+    next()
+    else res.redirect ('/paws/sign-in')
+  }
   
   // Function that returns a middleware
   // checkRole: (role) => {

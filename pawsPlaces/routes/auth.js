@@ -14,7 +14,7 @@ router.get("/sign-in", (req, res, next) => {
 
 router.post("/sign-in", passport.authenticate("local", {
   successRedirect: "/",
-  failureRedirect: "/paws/sign-in",
+  failureRedirect: "/auth/sign-in",
   failureFlash: true,
   passReqToCallback: true
 }));

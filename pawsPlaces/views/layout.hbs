@@ -13,6 +13,7 @@
 
 <body>
   <nav class="navbar" style="background-color: #b4888b; justify-content: flex-end;">
+
     <a href="/" class="text-decoration-none " style="color:black; padding-right: 25px;">Home</a>
 
     {{!-- Falta fazer do home um logo. --}}
@@ -21,6 +22,12 @@
     {{!-- vai ser para colocar o {{nome}} do user --}}
     <a href="/auth/sign-out" class="text-decoration-none" style="color:black; padding-right: 25px;">Sign Out</a>
     {{!-- {{/if}} --}}
+    {{/if}}
+  
+    {{#if isAdmin}}
+    <a href="/auth/admin" class="text-decoration-none" style="color:black; padding-right: 25px;">Validate</a>
+    <a href="/auth/sign-out" class="text-decoration-none" style="color:black; padding-right: 25px;">Sign Out</a>
+
 
     {{else}}
     {{!-- Not connected --}}

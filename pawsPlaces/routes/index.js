@@ -2,7 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User');
-const {isConnected} = require('../middlewares')
+const {isConnected, isAdmin, isNotRegister} = require('../middlewares')
 
 
 

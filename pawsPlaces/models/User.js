@@ -13,7 +13,8 @@ const userSchema = new Schema({
   description: String,
   role:{
     type: String,
-    default: "User"
+    enum: ['NOT_REGISTER', 'ADMIN', 'LOGED_IN'],
+    default: 'NOT_REGISTER'
     // mais tarde podemos adicionar ADMIN
   },
   picture: {
