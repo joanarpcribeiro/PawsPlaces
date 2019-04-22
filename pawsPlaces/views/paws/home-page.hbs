@@ -8,7 +8,19 @@
     <form action="/paws/places" class="form-inline" method="POST" style="margin: auto;
     width: 70%; height: 60px;">
       <input class="form-control mr-sm-2" type="search" placeholder="Find places, restaurants, etc" aria-label="Search"
-        style="width: 90%;">
+        style="width: 90%;" list="categories" name="category">
+      <datalist id="categories">
+        <a href="{{this.category.[0]}}"><option value="Restaurants"></a>
+        <option value="Accomodation">
+        <option value="Garden">
+        <option value="Dog grooming">
+        <option value="Veterinarian">
+        <option value="Pet shop">
+        <option value="Public Transportation">
+        <option value="Veterinarian">
+        <option value="Hospital">
+        <option value="Shopping">
+      </datalist>
       <button class="btn my-2 my-sm-0" type="submit"
         style="width: 8%; border: 1px solid rgb(161, 138, 138);">Search</button>
     </form>
@@ -25,7 +37,6 @@
     style="background-color: rgb(219, 219, 219); width: 31%; margin:20px; height: 500px; display:inline-block;">
     <img class="card-img-top" src="{{this.pictureURL}}" style="width: 100%; height: 80%" alt="">
     <div class="card-body">
-      {{!-- <h5 class="card-title">{{this.name}}</h5> --}}
       <h5><a href="/auth/places" class="btn btn-dark">{{this.name}}</a></h5>
       <p class="card-text">{{this.neighbourhood}}</p>
     </div>

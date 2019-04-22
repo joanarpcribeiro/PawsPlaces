@@ -12,7 +12,8 @@ const path         = require('path');
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
-    
+
+
 
 mongoose
   .connect('mongodb://localhost/pawsplaces', {useNewUrlParser: true})
@@ -22,6 +23,7 @@ mongoose
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
+
 
 const app_name = require('./package.json').name;
 const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`);
@@ -74,6 +76,7 @@ app.use(session({
 app.use(flash());
 require('./passport')(app);
 
+
 app.use((req,res,next) => {
   // Define a view variable named `isConnected`
   res.locals.isConnected = !!req.user
@@ -92,5 +95,4 @@ app.use('/', index);
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
       
-
 module.exports = app;

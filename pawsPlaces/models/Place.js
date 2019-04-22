@@ -18,7 +18,14 @@ const placeSchema = new Schema({
   pictureURL: String,
   contactNumb: Number,
   websiteURL: String,
-  category: String,
+  category: {
+    type: String,
+    enum: ["Restaurant", "Accomodation", "Garden", "Dog grooming", "Public Transportation", "Veterinarian", "Pet shop", "Hospital", "Shopping"]
+  },
+  group: {
+    type: String,
+    enum: ["Hotel", "Guesthouse", "Apartment", "Hostel", "Train", "Metro, bus and tramway", "Express Bus", "Boat", "Bus"]
+  },
   warning: String
 
 }, {
