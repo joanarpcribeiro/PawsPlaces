@@ -13,6 +13,7 @@ const placeSchema = new Schema({
     min: 4
   },
   postCode: String,
+  description: String,
   neighbourhood: String,
   pictureURL: String,
   contactNumb: Number,
