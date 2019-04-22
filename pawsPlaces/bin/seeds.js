@@ -349,7 +349,98 @@ const places = [
     websiteURL: "https://www.vetlaranjeiras.com/m/pt/home/",
     category: "Hospital",
     warning: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
-  }
+  },{
+    // SHOPPING
+    name: "Alegro Alfragide",
+    address: "Avenida dos Cavaleiros, nº60",
+    postCode: "2790-045",
+    neighbourhood: "Carnaxide, Lisboa",
+    picture: "./Images/P/Alegro-Alfragide-Distribuição-Hoje.jpg",
+    contactNumb: 210534935,
+    website: "https://alegro.pt/alegro-alfragide",
+    category: "Shopping",
+    description: "As your dog is a citizen of the world, in Alegro there is an exclusive WC. To have a passport to access the mall you need some documentation: Identification document of the owner and / or responsible, bulletin of vaccination in day of the dog,  registration of the microchip (if the microchip number is not evidenced in the vaccination report) and municipal license in good standing and dog liability insurance.",
+    Warnings: "The malls are busy places, we do not advise these places to dogs that are not accustomed to much noise and movement.",
+  }, {
+    // GARDEN
+    name: "Parque canino do Campo Grande",
+    address: "Jardim Mário Soares",
+    postCode: "1700-162",
+    neighbourhood: "Campo Grande, Lisboa",
+    picture: "./Images/P/jardim.jpg",
+    contactNumb: 0000,
+    website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/jardim-mario-soares",
+    category: "Garden",
+    description: "This garden is also known as 'Jardim do campo grande', it's the biggest garden in the center of Lisbon.",
+    Warnings: "None"
+  }, {
+    name: "Dog Park",
+    address: "Praça São João Bosco nº 558",
+    postCode: "1350-297",
+    neighbourhood: "Estrela, Lisboa",
+    picture: "/Images/P/a87ff679a2f3e71d9181a67b7542122c-39-754x394.jpg",
+    contactNumb: 0000,
+    website: "https://www.jf-estrela.pt/",
+    category: "Garden",
+    description: "This garden have a WC and a water font.",
+    Warnings: "None"
+  }, {
+    name: "Campo Mártires da Pátria",
+    address: "Campo Mártires da Pátria nº 48",
+    postCode: "1150-343",
+    neighbourhood: "Lisboa",
+    picture: "/Images/P/image.jpg",
+    contactNumb: 0000,
+    website: "https://www.tripadvisor.pt/Attraction_Review-g189158-d10620496-Reviews-Campo_dos_Martires_da_Patria-Lisbon_Lisbon_District_Central_Portugal.html",
+    category: "Garden",
+    description: "In this garden you have several obstacles, a water font and a bag dispenser.",
+    Warnings: "None"
+  }, {
+    name: "Jardim Fernando Pessoa",
+    address: "Avenida de Roma nº 14",
+    postCode: "1000-300",
+    neighbourhood: "Areeiro, Lisboa",
+    picture: "/Images/P/6_Jardim-fernando-Pessa.jpg",
+    contactNumb: 0000,
+    website: "http://www.cm-lisboa.pt/zonas/centro/espacos-verdes/info/jardim-fernando-pessa",
+    category: "Garden",
+    description: "Jardim Fernando Pessoa is a small garden close to the Forúm Lisboa and Avenida de Roma. The name is a tribute for the artist Fernando Pessoa.",
+    Warnings: "None"
+  }, {
+    name: "Parque canino do Parque das Artes e do Desporto",
+    address: "Mina de Água, antiga Lixeira da Boba ",
+    postCode: "None",
+    neighbourhood: "Amadora, Lisboa",
+    picture: "/Images/P/image(1).jpg",
+    contactNumb: 0000,
+    website: "https://www.timeout.pt/lisboa/pt/coisas-para-fazer/parque-das-artes-e-do-desporto",
+    category: "Garden",
+    description: "A perfect place to take a walk with your best friend",
+    Warnings: "None",
+  },{
+    name: "Jardim da Quinta das Conchas",
+    address: "Alameda das Linhas de Torres",
+    postCode: "None",
+    neighbourhood: "Lumiar, Lisboa",
+    picture: "/Images/P/parque-das-conchas3.jpg",
+    contactNumb: 217594516,
+    website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/parque-da-quinta-das-conchas-e-dos-lilases",
+    category: "Garden",
+    description: "This garden have a restaurant and many walking areas.",
+    Warnings: "None",
+  },{
+    name: "Tapada das Necessidades",
+    address: "Calçada Necessidades",
+    postCode: "None",
+    neighbourhood: "Estrela, Lisboa",
+    picture: "/Images/P/tapada-necessidades-ASC_2881.jpg",
+    contactNumb: 213932110,
+    website: "http://www.cm-lisboa.pt/zonas/centro-historico/espacos-verdes/info/tapada-das-necessidades",
+    category: "Garden",
+    description: "This is a beautiful garden! You will find here a Lake, a waterfall and a statuary.",
+    Warnings: "None",
+  },
+// Monumentos , não encontrei nada.
 ]
 
 Place.deleteMany()
