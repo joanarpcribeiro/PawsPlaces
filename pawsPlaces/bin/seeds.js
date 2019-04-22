@@ -29,6 +29,7 @@ const places = [
     contactNumb: 216018472,
     websiteURL: "http://www.fabulas.pt",
     category: "Restaurant",
+    description: "",
     warning: "Not suitable for claustrophobic dogs, or dogs that chew on furniture."
   },
   {
@@ -40,6 +41,7 @@ const places = [
     contactNumb: 210956828,
     websiteURL: "http://www.kaffeehaus-lisboa.com/", 
     category: "Restaurant",
+    description: "",
     warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always." ,
   },
   {
@@ -51,6 +53,7 @@ const places = [
     contactNumb: 213960773,
     websiteURL: "https://www.boutiklisboa.com/", 
     category: "Restaurant",
+    description: "",
     warning: "Not suitable for dogs that don't feel comfortable around other people/dogs",
   },
   {
@@ -62,6 +65,7 @@ const places = [
     contactNumb: 927376619,
     websiteURL: "https://www.facebook.com/quiosqueavenidaroma", 
     category: "Restaurant",
+    description: "",
     warning: "This is an outdoor café. Be aware that there are roads nearby, keep your dog on a leash always.",
   },
   {
@@ -73,6 +77,7 @@ const places = [
     contactNumb: 213465014,
     websiteURL: "http://www.noobaicafe.com/", 
     category: "Restaurant",
+    description: "",
     warning: "This is an outdoor café. Be aware that there are roads nearby, keep your dog on a leash always.",
   },
   {
@@ -84,6 +89,7 @@ const places = [
     contactNumb: 214011807,
     websiteURL: "https://www.facebook.com/cafedafabrica/", 
     category: "Restaurant",
+    description: "",
     warning: "none",
   },
   {
@@ -95,6 +101,7 @@ const places = [
     contactNumb: 926520568,
     websiteURL: "https://www.facebook.com/CozinhaPopularDaMouraria", 
     category: "Restaurant",
+    description: "",
     warning: "none",
   },
   {
@@ -106,6 +113,7 @@ const places = [
     contactNumb: 210191305,
     websiteURL: "https://www.zomato.com/pt/grande-lisboa/o-vilh%C3%A3o-alg%C3%A9s-lisboa/photos?category=all" , 
     category: "Restaurant",
+    description: "",
     warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always. Always contact the place directly, to confirm details are up to date." ,
   },
   {
@@ -117,6 +125,7 @@ const places = [
     contactNumb: 218860119,
     websiteURL: "https://www.facebook.com/28cafelisboa-173095969514482/" , 
     category: "Restaurant",
+    description: "",
     warning: "Dogs only allowed on the esplanade (outside). Be aware that there are roads nearby. Keep your dog on a leash, always. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -128,6 +137,7 @@ const places = [
     contactNumb: 213639055,
     websiteURL: "http://restaurantebelem2a8.com/", 
     category: "Restaurant",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date." ,
   },
   {
@@ -139,6 +149,7 @@ const places = [
     contactNumb: 218930000,
     websiteURL: "https://www.tryporiente.com/",
     category: "Accomodation - Hotel",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -150,6 +161,7 @@ const places = [
     contactNumb: 213818700,
     websiteURL: "https://www.ihg.com/intercontinental/",
     category: "Accomodation - Hotel",
+    description: "",
     warning: "Pet fee charged. Big dogs allowed. One pet Maximum. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -161,6 +173,7 @@ const places = [
     contactNumb: 213811400,
     websiteURL: "https://www.fourseasons.com/lisbon/",
     category: "Accomodation - Hotel",
+    description: "",
     warning: "Small pets only - allows 2 pets up to 7kg for no additional fee. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -172,6 +185,7 @@ const places = [
     contactNumb: 217244800,
     websiteURL: "https://www.accorhotels.com/gb/hotel-0784-novotel-lisboa/index.shtml",
     category: "Accomodation - Hotel",
+    description: "",
     warning: "Pet fee charged. Big Dogs allowed. 2+ Pets allowed. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -183,6 +197,7 @@ const places = [
     contactNumb: 213155018,
     websiteURL: "http://www.joaoxxiresidencial.com/",
     category: "Accomodation - Guesthouse",
+    description: "",
     warning: "Pet fee charged. Small dogs only. One pet Maximum. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -194,6 +209,7 @@ const places = [
     contactNumb: 000000,
     websiteURL: "http://www.chiadoinsuites100.spotportugal-pt.site/",
     category: "Accomodation - Apartment",
+    description: "",
     warning: "Pet fee charged. Big Dogs Allowed. 2+ Pets Allowed. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -205,6 +221,7 @@ const places = [
     contactNumb: 218883127,
     websiteURL: "https://www.facebook.com/pages/Alfama-Patio-Hostel/123631741046292",
     category: "Accomodation - Hostel",
+    description: "",
     warning: "Pet fee charged. Big Dogs allowed. 2+ Pets allowed. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -216,6 +233,7 @@ const places = [
     contactNumb: 218862591,
     websiteURL: "https://www.booking.com/hotel/pt/pensao-sao-joao-da-praca.html",
     category: "Accomodation - Guesthouse",
+    description: "",
     warning: "No pet fee. Big dogs allowed. 2+ pets allowed. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -227,6 +245,7 @@ const places = [
     contactNumb: 211914457,
     websiteURL: "http://www.portugueseliving.com/Lisbon-Apartment-Castelo-Terrace.html",
     category: "Accomodation - Apartment",
+    description: "",
     warning: "No pet fee. Big dogs allowed. 2+ pets allowed. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -238,6 +257,7 @@ const places = [
     contactNumb: 911928003,
     websiteURL: "http://carcavelossurfhostel.com/",
     category: "Accomodation - Hostel",
+    description: "",
     warning: "Carcavelos Surf Hostel welcomes dogs of any size for no additional fee. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -249,6 +269,7 @@ const places = [
     contactNumb: 218489230,
     websiteURL: "http://www.clinicaveterinaria.com.pt/",
     category: "Veterinarian",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -260,6 +281,7 @@ const places = [
     contactNumb: 217552868,
     websiteURL: "http://www.vet-altalisboa.pt/",
     category: "Veterinarian",
+    description: "",
     warning: "They have an emergency advice helpline, available 24h. Check their websiteURL for further details. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -271,6 +293,7 @@ const places = [
     contactNumb: 212255084,
     websiteURL: "www.lowcostveterinarios.pt",
     category: "Veterinarian",
+    description: "",
     warning: "WebsiteURL only in Portuguese. They have an emergency helpline. Check their websiteURL for further details. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -282,6 +305,7 @@ const places = [
     contactNumb: 218122486,
     websiteURL: "https://www.facebook.com/CoolVetCentroVeterinario/",
     category: "Veterinarian",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -293,6 +317,7 @@ const places = [
     contactNumb: 213011370,
     websiteURL: "http://www.restelovet.pt/",
     category: "Veterinarian",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -304,6 +329,7 @@ const places = [
     contactNumb: 217168548,
     websiteURL: "https://hospitalveterinario.eu/",
     category: "Hospital",
+    description: "",
     warning: "WebsiteURL only in Portuguese. Open 24h. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -315,6 +341,7 @@ const places = [
     contactNumb: 213032119,
     websiteURL: "https://www.hospitalveterinario.pt/en/home",
     category: "Hospital",
+    description: "",
     warning: "Open 24h. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -326,6 +353,7 @@ const places = [
     contactNumb: 213972997,
     websiteURL: "https://veterinario.pt/",
     category: "Hospital",
+    description: "",
     warning: "Emergency services open 24h. Check WebsiteURL for further information. Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -337,6 +365,7 @@ const places = [
     contactNumb: 213515030,
     websiteURL: "https://www.facebook.com/pages/Hospital-Veterinario-da-Estefania/223335257797501",
     category: "Hospital",
+    description: "",
     warning: "Always contact the place directly, to confirm details are up to date.",
   },
   {
@@ -348,99 +377,108 @@ const places = [
     contactNumb: 217270945,
     websiteURL: "https://www.vetlaranjeiras.com/m/pt/home/",
     category: "Hospital",
+    description: "",
     warning: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
-  },{
+  },
+  {
     // SHOPPING
     name: "Alegro Alfragide",
     address: "Avenida dos Cavaleiros, nº60",
     postCode: "2790-045",
     neighbourhood: "Carnaxide, Lisboa",
-    picture: "./Images/P/Alegro-Alfragide-Distribuição-Hoje.jpg",
+    pictureURL: "/images/P/AlegroAlfragideDistribuicaoHoje.jpg",
     contactNumb: 210534935,
     website: "https://alegro.pt/alegro-alfragide",
     category: "Shopping",
     description: "As your dog is a citizen of the world, in Alegro there is an exclusive WC. To have a passport to access the mall you need some documentation: Identification document of the owner and / or responsible, bulletin of vaccination in day of the dog,  registration of the microchip (if the microchip number is not evidenced in the vaccination report) and municipal license in good standing and dog liability insurance.",
-    Warnings: "The malls are busy places, we do not advise these places to dogs that are not accustomed to much noise and movement.",
-  }, {
+    warnings: "The malls are busy places, we do not advise these places to dogs that are not accustomed to much noise and movement.",
+  }, 
+  {
     // GARDEN
     name: "Parque canino do Campo Grande",
     address: "Jardim Mário Soares",
     postCode: "1700-162",
     neighbourhood: "Campo Grande, Lisboa",
-    picture: "./Images/P/jardim.jpg",
+    pictureURL: "/images/P/jardim.jpg",
     contactNumb: 0000,
     website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/jardim-mario-soares",
     category: "Garden",
     description: "This garden is also known as 'Jardim do campo grande', it's the biggest garden in the center of Lisbon.",
-    Warnings: "None"
-  }, {
+    warnings: "None"
+  }, 
+  {
     name: "Dog Park",
     address: "Praça São João Bosco nº 558",
     postCode: "1350-297",
     neighbourhood: "Estrela, Lisboa",
-    picture: "/Images/P/a87ff679a2f3e71d9181a67b7542122c-39-754x394.jpg",
+    pictureURL: "/images/P/DogPark.jpg",
     contactNumb: 0000,
     website: "https://www.jf-estrela.pt/",
     category: "Garden",
     description: "This garden have a WC and a water font.",
-    Warnings: "None"
-  }, {
+    warnings: "None"
+  }, 
+  {
     name: "Campo Mártires da Pátria",
     address: "Campo Mártires da Pátria nº 48",
     postCode: "1150-343",
     neighbourhood: "Lisboa",
-    picture: "/Images/P/image.jpg",
+    pictureURL: "/images/P/image.jpg",
     contactNumb: 0000,
     website: "https://www.tripadvisor.pt/Attraction_Review-g189158-d10620496-Reviews-Campo_dos_Martires_da_Patria-Lisbon_Lisbon_District_Central_Portugal.html",
     category: "Garden",
     description: "In this garden you have several obstacles, a water font and a bag dispenser.",
-    Warnings: "None"
-  }, {
+    warnings: "None"
+  }, 
+  {
     name: "Jardim Fernando Pessoa",
     address: "Avenida de Roma nº 14",
     postCode: "1000-300",
     neighbourhood: "Areeiro, Lisboa",
-    picture: "/Images/P/6_Jardim-fernando-Pessa.jpg",
+    pictureURL: "/images/P/JardimFernandoPessa.jpg",
     contactNumb: 0000,
     website: "http://www.cm-lisboa.pt/zonas/centro/espacos-verdes/info/jardim-fernando-pessa",
     category: "Garden",
     description: "Jardim Fernando Pessoa is a small garden close to the Forúm Lisboa and Avenida de Roma. The name is a tribute for the artist Fernando Pessoa.",
-    Warnings: "None"
-  }, {
+    warnings: "None"
+  }, 
+  {
     name: "Parque canino do Parque das Artes e do Desporto",
     address: "Mina de Água, antiga Lixeira da Boba ",
     postCode: "None",
     neighbourhood: "Amadora, Lisboa",
-    picture: "/Images/P/image(1).jpg",
+    pictureURL: "/images/P/image(1).jpg",
     contactNumb: 0000,
     website: "https://www.timeout.pt/lisboa/pt/coisas-para-fazer/parque-das-artes-e-do-desporto",
     category: "Garden",
     description: "A perfect place to take a walk with your best friend",
-    Warnings: "None",
-  },{
+    warnings: "None",
+  },
+  {
     name: "Jardim da Quinta das Conchas",
     address: "Alameda das Linhas de Torres",
     postCode: "None",
     neighbourhood: "Lumiar, Lisboa",
-    picture: "/Images/P/parque-das-conchas3.jpg",
+    pictureURL: "/images/P/ParqueDasConchas.jpg",
     contactNumb: 217594516,
     website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/parque-da-quinta-das-conchas-e-dos-lilases",
     category: "Garden",
     description: "This garden have a restaurant and many walking areas.",
-    Warnings: "None",
-  },{
+    warnings: "None",
+  },
+  {
     name: "Tapada das Necessidades",
     address: "Calçada Necessidades",
     postCode: "None",
     neighbourhood: "Estrela, Lisboa",
-    picture: "/Images/P/tapada-necessidades-ASC_2881.jpg",
+    pictureURL: "/images/P/TapadaNecessidadesASC.jpg",
     contactNumb: 213932110,
     website: "http://www.cm-lisboa.pt/zonas/centro-historico/espacos-verdes/info/tapada-das-necessidades",
     category: "Garden",
     description: "This is a beautiful garden! You will find here a Lake, a waterfall and a statuary.",
-    Warnings: "None",
+    warnings: "None",
   },
-// Monumentos , não encontrei nada.
+
 ]
 
 Place.deleteMany()
