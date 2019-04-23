@@ -526,7 +526,7 @@ const places = [
     address: "Rua 4 de Outubro, Lj 7 -A, Bairro da Carochia",
     postCode: "2620-206",
     neighbourhood: "Ramada-Lisbon",
-    pictureURL: "/images/D/",
+    pictureURL: "/images/D/cabelcao.png",
     contactNumb: 936258503,
     websiteURL: "http://cabeleireirodocao.com/",
     category: "Dog grooming",
@@ -537,7 +537,7 @@ const places = [
     address: "Av. Canto e Castro Lote46 Loja 4B",
     postCode: "2700-782",
     neighbourhood: "Amadora-Lisbon",
-    pictureURL: "/image/D/petcia.png",
+    pictureURL: "/images/D/petcia.png",
     contactNumb: 915255883,
     websiteURL: "https://petecia.pt/",
     category: "Dog grooming",
@@ -663,16 +663,18 @@ Place.deleteMany()
 
 let users = [
   {
+    name: "Alice",
     username: "alice",
     email: "alice@hotmail.com",
     password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
-    role: "LOGED_IN"
+    role: "LOGED_IN",
   },
   {
+    name: "Bob",
     username: "bob",
     email: "bob@hotmail.com",
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
-    role: "NOT_REGISTER"
+    role: "NOT_REGISTER",
   },
   {
     username: "ADMIN",
