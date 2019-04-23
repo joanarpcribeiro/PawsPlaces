@@ -537,7 +537,7 @@ const places = [
     address: "Av. Canto e Castro Lote46 Loja 4B",
     postCode: "2700-782",
     neighbourhood: "Amadora-Lisbon",
-    pictureURL: "/image/D/petcia.png",
+    pictureURL: "/images/D/petcia.png",
     contactNumb: 915255883,
     websiteURL: "https://petecia.pt/",
     category: "Dog grooming",
