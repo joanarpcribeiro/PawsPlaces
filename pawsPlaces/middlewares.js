@@ -5,12 +5,13 @@ module.exports = {
   checkConnected: (req,res,next) => {
     // req.user contains the informations about the connected user (undefined if not connected)
     if (req.user) next()
-    else res.redirect('/sign-in')
+    else res.redirect('/auth/sign-in')
   },
+
   checkAdmin: (req,res,next) => {
     if(req.user && req.user.role === "ADMIN")
     next()
-    else res.redirect ('/paws/sign-in')
+    else res.redirect ('/auth/sign-in')
   }
   
   // Function that returns a middleware

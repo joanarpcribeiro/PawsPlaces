@@ -2,11 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User');
-const {isConnected, isAdmin, isNotRegister} = require('../middlewares')
-
-
-
-//const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
+const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
 
 /* GET home page */
  router.get('/', (req, res, next) => {
@@ -20,11 +16,16 @@ const {isConnected, isAdmin, isNotRegister} = require('../middlewares')
 //  res.render('paws/home-page')
 //})
 
-router.get('/profile', (req, res, next) => {
-  res.render('paws/profile-edit')
+router.get('/profile-view', checkConnected, (req,res,next)=>{
+  User.findById(req.user._id)
+  .then( (userFromDB) => {
+    res.render('paws/profile-view', {userFromDB})
+  })
+  .catch(next)
 })
 
-// router.post('/profile-edit', isConnected, (req, res, next) => {
+
+// router.post('/profile-edit', checkConnected, (req, res, next) => {
 //   User.create({
 //     name: req.body.name,
 //     password: req.body.password,
@@ -35,21 +36,14 @@ router.get('/profile', (req, res, next) => {
 //     .catch(next)
 // })
 
-// router.get('/sign-in', (req, res, next) => {
-//   console.log('wat');
-//   res.render('paws/sign-in')
-// })
-
 // router.get('/sign-out', (req, res, next) => {
 //   res.render('paws/sign-out')
 // })
 
-// router.get('/sign-up', (req, res, next) => {
-//   res.render('paws/sign-up')
-// })
+// Routes to display each place
 
-// Page to display all places
-
-
+router.get('/restaurants', (req, res, next) => {
+  res.render('paws/restaurants')
+})
 
 module.exports = router;
