@@ -43,12 +43,22 @@ router.get('/profile-view', checkConnected, (req,res,next)=>{
 // Routes to display each place
 
 router.get('/restaurants', (req, res, next) => {
-  res.render('paws/restaurants')
+  Place.find()
+    .then((places) => {
+      res.render('paws/restaurants', {
+      places
+    })
+  })
+  .catch(next)
 })
 
 router.get('/admin', (req,res,next) => {
   res.render('paws/admin')
 })
+//router.post('/restaurants'),(req, res, next) => {
+//  res.render('paws/restaurants')
+//}
+
 
 
 module.exports = router;
