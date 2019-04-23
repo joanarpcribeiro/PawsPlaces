@@ -64,4 +64,15 @@ button:hover {
   .sign button {
     border: 1px solid #5d5d5d; }
 
+.profile {
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 100px;
+  padding-left: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.253);
+  padding: 50px;
+  box-shadow: 5px 10px #888888;
+  width: 70%;
+  height: 640px; }
+
 /*# sourceMappingURL=style.css.map */

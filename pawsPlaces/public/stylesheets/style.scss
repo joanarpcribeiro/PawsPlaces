@@ -54,5 +54,15 @@ button:hover {
       border: 1px solid black; 
       height: 40px; 
       width: 400px;}
-  button{border: 1px solid rgb(93, 93, 93); }
-}
+  button  {border: 1px solid rgb(93, 93, 93); } }
+  
+  .profile {
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 100px;
+    padding-left: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    padding: 50px;
+    box-shadow: 5px 10px #888888;
+    width: 70%;
+    height: 640px; }
