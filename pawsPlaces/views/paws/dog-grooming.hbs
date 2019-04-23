@@ -1,0 +1,14 @@
+<h1>Dog Grooming</h1>
+
+{{#each places}}
+    name: {{this.name}}
+    pictureURL: <img src="{{this.pictureURL}}">
+    address: {{this.address}}
+    postCode: {{this.postCode}}
+    neighbourhood: {{this.neighbourhood}}
+    contactNumb: {{this.contactNumb}}
+    websiteURL: {{this.websiteURL}}
+    category: {{this.category}},
+    description: {{this.description}},
+    warning: {{this.warning}}
+{{/each}}
