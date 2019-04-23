@@ -3,7 +3,6 @@
 {{#each places}}
     name: {{this.name}}
     pictureURL: <img src="{{this.pictureURL}}">
-  {{#if isConnected}}
     address: {{this.address}}
     postCode: {{this.postCode}}
     neighbourhood: {{this.neighbourhood}}
@@ -12,6 +11,5 @@
     category: {{this.category}}
     description: {{this.description}},
     warning: {{this.warning}}
-  {{/if}}
 {{/each}}
 

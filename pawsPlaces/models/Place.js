@@ -27,6 +27,10 @@ const placeSchema = new Schema({
     enum: ["Hotel", "Guesthouse", "Apartment", "Hostel", "Train", "Metro, bus and tramway", "Express Bus", "Boat", "Bus"]
   },
   warning: String,
+  isValidated: { 
+    type: Boolean,
+    default: false,
+  },
 }, {
   timestamps: {
     createdAt: 'created_at',

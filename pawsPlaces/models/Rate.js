@@ -8,7 +8,11 @@ const rateSchema = new Schema({
     required: true,
     min: 1,
     max: 5
-  }
+  },
+  isValidated: { 
+    type: Boolean,
+    default: false,
+  },
 }, {
   timestamps: {
     createdAt: 'created_at',
