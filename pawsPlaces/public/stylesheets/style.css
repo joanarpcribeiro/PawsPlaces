@@ -39,11 +39,13 @@ button:hover {
   text-align: center; }
 
 .sign {
-  border: 1px solid black;
   width: 30%;
   margin: auto;
   margin-top: 8%;
-  background-color: white; }
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  box-shadow: 5px 10px #888888; }
   .sign h2 {
     padding: 30px;
     font-size: 45px;

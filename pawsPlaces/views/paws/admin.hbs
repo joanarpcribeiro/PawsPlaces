@@ -1,0 +1,21 @@
+<h1>Validate</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Picture</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each places}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td><img src="{{this.pictureUrl}}"></td>
+      <td><a href="/places/{{this._id}}">Validate</a></td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

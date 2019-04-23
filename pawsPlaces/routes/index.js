@@ -46,4 +46,9 @@ router.get('/restaurants', (req, res, next) => {
   res.render('paws/restaurants')
 })
 
+router.get('/admin', (req,res,next) => {
+  res.render('paws/admin')
+})
+
+
 module.exports = router;
