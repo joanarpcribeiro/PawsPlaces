@@ -1,3 +1,7 @@
+@import'../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// $primary: red;
+
 body { 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin:0;}
@@ -10,7 +14,9 @@ button:hover {
   height: 85px; 
   border-bottom:1px solid rgba(16, 41, 82, 0.075);
   img {
-  height: 10vh; padding-right: 125vh; padding-bottom: 30px;}   }
+  height: 10vh; 
+  padding-right: 125vh; 
+  padding-bottom: 30px;}   }
 
 .navbar-layout-a {
   color:black; 
@@ -59,10 +65,10 @@ button:hover {
   .profile {
     background-color: white;
     margin-left: 20%;
-    margin-top: 100px;
+    margin-top: 80px;
     padding-left: 10px;
     border: 1px solid rgba(128, 128, 128, 0.253);
     padding: 50px;
     box-shadow: 5px 10px #888888;
     width: 70%;
-    height: 640px; }
+    height: 750px; }

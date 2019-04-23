@@ -22,7 +22,7 @@ const userSchema = new Schema({
   },
   picture: {
     type: String,
-    default: "imagemACriarPorNos",
+    default: "/images/P/defaultProfile.jpeg",
   },
   Pet: String,
   About_pet: String
