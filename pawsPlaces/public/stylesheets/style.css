@@ -2,11 +2,64 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0; }
 
-a {
-  color: black; }
-
 button:hover {
   border: 1px solid white;
   background-color: #9e7c7c; }
+
+.navbar-layout {
+  height: 85px;
+  border-bottom: 1px solid rgba(16, 41, 82, 0.075); }
+  .navbar-layout img {
+    height: 10vh;
+    padding-right: 125vh;
+    padding-bottom: 30px; }
+
+.navbar-layout-a {
+  color: black;
+  font-size: 25px;
+  padding-bottom: 40px;
+  padding-right: 40px; }
+
+.navbar2hp {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.157);
+  border-top: 2px solid rgba(0, 0, 0, 0.157); }
+  .navbar2hp a {
+    margin-right: 30px;
+    font-size: 20px; }
+
+.quote {
+  position: absolute;
+  font-size: 55px;
+  color: rgba(85, 31, 31, 0.767);
+  width: 100%;
+  margin-top: 16%;
+  text-align: center; }
+
+.sign {
+  border: 1px solid black;
+  width: 30%;
+  margin: auto;
+  margin-top: 8%;
+  background-color: white; }
+  .sign h2 {
+    padding: 30px;
+    font-size: 45px;
+    text-align: center; }
+  .sign #div {
+    height: 400px; }
+  .sign #form-container {
+    margin-left: 90px;
+    padding-top: 40px; }
+  .sign #username, .sign #password {
+    color: white;
+    background-color: #b4888b;
+    border: 1px solid black;
+    height: 40px;
+    width: 400px; }
+  .sign button {
+    border: 1px solid #5d5d5d; }
 
 /*# sourceMappingURL=style.css.map */

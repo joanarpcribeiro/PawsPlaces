@@ -1,31 +1,28 @@
-<h2 style="padding: 30px; font-size: 45px; text-align: center;">Signup</h2>
-
-<div class="jumbotron jumbotron-fluid" style="height: 600px">
-  <div>
-    <form action="/auth/sign-up" method="post" id="form-container" style="margin-left: 45%; padding-top: 65px;">
-      <label for="username" style="font-size:20px;">Username</label>
-      <br>  
-      <input id="username" type="text" name="username" placeholder="Username">
-
-      <br><br>
-
-      <label for="password" style="font-size:20px;">Password</label>
-      <br>
-      <input id="password" type="password" name="password" placeholder="Your password">
-      <br>
-      {{#if message }}
-      <div class="error-message">{{ message }}</div>
-      {{/if}}
-
-      <br><br>
-
-      <button class="btn my-2 my-sm-0" style="border: 1px solid rgb(93, 93, 93);">Create account</button>
-      <br>
-      <br>
-      <p class="account-message">
-        Do you already have an account?
-        <a href="/auth/sign-in">Login</a>
-      </p>
-    </form>
-  </div>
-</div>
+<body style="background-color: lightgrey;">
+  <section class="sign">
+    <h2>Sign Up</h2>
+    <div>
+      <div>
+        <form action="/auth/sign-up" method="post" id="form-container">
+          <label for="username" style="font-size:20px;">Username</label>
+          <br>
+          <input id="username" type="text" name="username" placeholder="Username">
+          <br><br>
+          <label for="password" style="font-size:20px;">Password</label>
+          <br>
+          <input id="password" type="password" name="password" placeholder="Your password">
+          <br>
+          {{#if message }}
+          <div class="error-message">{{ message }}</div>
+          {{/if}}
+          <br><br>
+          <button class="btn my-2 my-sm-0">Create account</button>
+          <br>
+          <br>
+          <p class="account-message">
+            Do you already have an account?
+            <a href="/auth/sign-in">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>

@@ -1,13 +1,56 @@
-body {
+body { 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin:0;
-}
-
-a {
-  color: rgb(0, 0, 0);
-}
+  margin:0;}
 
 button:hover {
   border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(158, 124, 124);
+  background-color: rgb(158, 124, 124);}
+
+.navbar-layout {
+  height: 85px; 
+  border-bottom:1px solid rgba(16, 41, 82, 0.075);
+  img {
+  height: 10vh; padding-right: 125vh; padding-bottom: 30px;}   }
+
+.navbar-layout-a {
+  color:black; 
+  font-size: 25px; 
+  padding-bottom: 40px; 
+  padding-right: 40px; }
+
+.navbar2hp {
+  height: 90px; 
+  display: flex; 
+  align-items: center; 
+  border-bottom:2px solid rgba(0, 0, 0, 0.157); 
+  border-top: 2px solid rgba(0, 0, 0, 0.157); 
+  a {
+  margin-right: 30px;
+  font-size: 20px;}  }
+.quote{
+  position: absolute; 
+  font-size: 55px; 
+  color: rgba(85, 31, 31, 0.767); width: 100%; 
+  margin-top: 16%; 
+  text-align: center;
+}
+.sign{
+  border: 1px solid black; 
+  width: 30%; 
+  margin:auto; 
+  margin-top: 8%; 
+  background-color: white; 
+  h2{
+    padding: 30px; 
+    font-size: 45px; 
+    text-align: center; }
+  #div {height: 400px;}
+  #form-container { margin-left: 90px; 
+      padding-top: 40px;}
+  #username, #password {color: white; 
+      background-color: #b4888b; 
+      border: 1px solid black; 
+      height: 40px; 
+      width: 400px;}
+  button{border: 1px solid rgb(93, 93, 93); }
 }
