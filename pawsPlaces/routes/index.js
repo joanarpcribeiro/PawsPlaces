@@ -46,4 +46,54 @@ router.get('/restaurants', (req, res, next) => {
   res.render('paws/restaurants')
 })
 
+router.get('/dog-grooming', (req, res, next) => {
+  Place.find({category: "Dog grooming"})
+  .then((places) => {
+    res.render('paws/dog-grooming', {
+      places
+    })
+  })
+  .catch(next)
+})
+
+router.get('/hospital', (req, res, next) => {
+  Place.find({category: "Hospital"})
+  .then((places) => {
+    res.render('paws/hospital', {
+      places
+    })
+  })
+  .catch(next)
+})
+
+router.get('/pet-shop', (req, res, next) => {
+  Place.find({category: "Pet shop"})
+  .then((places) => {
+    res.render('paws/pet-shop', {
+      places
+    })
+  })
+  .catch(next)
+})
+
+router.get('/public-transportation', (req, res, next) => {
+  Place.find({category: "Public Transportation"})
+  .then((places) => {
+    res.render('paws/public-transportation', {
+      places
+    })
+  })
+  .catch(next)
+})
+
+router.get('/veterinarian', (req, res, next) => {
+  Place.find({category: "Veterinarian"})
+  .then((places) => {
+    res.render('paws/veterinarian', {
+      places
+    })
+  })
+  .catch(next)
+})
+
 module.exports = router;
