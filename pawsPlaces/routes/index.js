@@ -43,7 +43,7 @@ router.get('/profile-view', checkConnected, (req,res,next)=>{
 // Routes to display each place
 
 router.get('/restaurants', (req, res, next) => {
-  Place.find()
+  Place.find({category: "Restaurant"})
     .then((places) => {
       res.render('paws/restaurants', {
       places
@@ -52,13 +52,35 @@ router.get('/restaurants', (req, res, next) => {
   .catch(next)
 })
 
-router.get('/admin', (req,res,next) => {
-  res.render('paws/admin')
+router.get('/gardens', (req, res, next) => {
+  Place.find({category: "Garden"})
+    .then((places) => {
+      res.render('paws/gardens', {
+      places
+    })
+  })
+  .catch(next)
 })
-//router.post('/restaurants'),(req, res, next) => {
-//  res.render('paws/restaurants')
-//}
 
+router.get('/accomodation', (req, res, next) => {
+  Place.find({category: "Accomodation"})
+    .then((places) => {
+      res.render('paws/accomodation', {
+      places
+    })
+  })
+  .catch(next)
+})
+
+router.get('/shopping', (req, res, next) => {
+  Place.find({category: "Shopping"})
+    .then((places) => {
+      res.render('paws/shopping', {
+      places
+    })
+  })
+  .catch(next)
+})
 
 
 module.exports = router;
