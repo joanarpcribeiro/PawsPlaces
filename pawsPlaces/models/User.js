@@ -11,7 +11,8 @@ const userSchema = new Schema({
   name: String,
   location: {
     type: String,
-    required: false
+    required: false,
+    default: "Lisbon",
   },
   description: String,
   role:{
