@@ -526,7 +526,7 @@ const places = [
     address: "Rua 4 de Outubro, Lj 7 -A, Bairro da Carochia",
     postCode: "2620-206",
     neighbourhood: "Ramada-Lisbon",
-    pictureURL: "/images/D/",
+    pictureURL: "/images/D/cabelcao.png",
     contactNumb: 936258503,
     websiteURL: "http://cabeleireirodocao.com/",
     category: "Dog grooming",
