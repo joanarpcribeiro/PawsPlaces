@@ -13,21 +13,26 @@
 
 <body>
 
-  <nav class="navbar" style="background-color: #b4888b; justify-content: flex-end;">
-
-    <a href="/" class="text-decoration-none " style="color:black; padding-right: 25px;">Home</a>
+  <nav class="navbar" style="background-color: #a8c6ce; justify-content: flex-end;">
+    <a href="/" class="text-decoration-none " style="color:black; padding-right: 35px; font-size: 25px">Home</a>
 
     {{#if isAdmin}}
-    <a href="/auth/admin" class="text-decoration-none" style="color:black; padding-right: 25px;">Validate</a>
+    <a href="/auth/admin" class="text-decoration-none"
+      style="color:black; padding-right: 35px; font-size: 25px">Validate</a>
     {{/if}}
 
+    <a href=""><img src="/images/P/pawss.png" alt="paws" style="position: absolute; height: 7vh; padding-right: 90%; width: auto;"></a>
     {{#if isConnected}}
-    <a href="/auth/profile-edit" class="text-decoration-none" style="color:black; padding-right: 25px;">Profile</a>
-    <a href="/auth/sign-out" class="text-decoration-none" style="color:black; padding-right: 25px;">Sign Out</a>
+    <a href="/auth/profile-edit" class="text-decoration-none"
+      style="color:black; padding-right: 35px; font-size: 25px">Profile</a>
+    <a href="/auth/sign-out" class="text-decoration-none" style="color:black; padding-right: 35px; font-size: 25px">Sign
+      Out</a>
 
     {{else}}
-    <a href="/auth/sign-in" class="text-decoration-none " style="color:black; padding-right: 25px;">Log in</a>
-    <a href="/auth/sign-up" class="text-decoration-none " style="color:black; padding-right: 25px;">Sign up</a>
+    <a href="/auth/sign-in" class="text-decoration-none " style="color:black; padding-right: 35px; font-size: 25px">Log
+      in</a>
+    <a href="/auth/sign-up" class="text-decoration-none " style="color:black; padding-right: 35px; font-size: 25px">Sign
+      up</a>
     {{/if}}
 
   </nav>
