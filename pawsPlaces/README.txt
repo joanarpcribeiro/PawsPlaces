@@ -5,4 +5,5 @@
 - linkar a pagina do edit profile com o profile
 - onclick mostrar os outros profiles.
 - bootstrap
-- 
+- mapa
+- email 
