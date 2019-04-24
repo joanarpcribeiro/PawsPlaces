@@ -22,7 +22,7 @@ router.get('/profile-edit', checkConnected, (req, res, next) => {
 
 
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  User.findByIdAndUpdate(req.params._id, {
+  User.findByIdAndUpdate(req.user._id, {
     username: req.body.username,
     name: req.body.name,
     lastName: req.body.lastName,
@@ -33,7 +33,7 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
     picture: req.body.picture,
     pet: req.body.pet,
     numbPet: req.body.numbPet,
-    aboutPet: req.body.aboutPet,
+    aboutPet: req.body.aboutPet
   })
     .then(() => {
       res.redirect('/profile-view')
@@ -69,7 +69,7 @@ router.get('/create-place', (req, res, next) => {
 })
 
 router.post('/create-place', (req, res, next) => {
-  Place.create({
+  Place.create({      
     name: req.param.name,
     address: req.param.address,
     postCode: req.param.postCode,

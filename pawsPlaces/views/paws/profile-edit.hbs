@@ -5,7 +5,9 @@
     <br>
     <div class="form-group">
       <label for="exampleFormControlFile1">Example file input</label>
-      <input type="file" class="form-control-file" id="exampleFormControlFile1" value="{{userFromDB.picture}}">
+      <input  enctype="multipart/form-data" action="/upload" name="picture" type="file" class="form-control-file" id="exampleFormControlFile1"
+        value="{{userFromDB.picture}}">
+        
     </div>
     <div class="md-4 mb-3">
       <label for="validationCustomUsername">Username</label>
@@ -13,7 +15,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
-        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
+        <input name="username" type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
           value="{{userFromDB.username}}" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
           Please choose a username.
@@ -23,7 +25,7 @@
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+        <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="First name"
           value="{{userFromDB.name}}">
         <div class="valid-feedback">
           Looks good!
@@ -31,47 +33,43 @@
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationCustom02">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name">
+        <input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+          value="{{userFromDB.lastName}}">
       </div>
     </div>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom03">City</label>
-        <input type="text" class="form-control" id="validationCustom03" placeholder="City"
+        <input name="location" type="text" class="form-control" id="validationCustom03" placeholder="City"
           value="{{userFromDB.location}}">
         <div class="invalid-feedback">
           Please provide a valid city.
         </div>
       </div>
     </div>
-    {{!-- <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-        <label class="form-check-label" for="invalidCheck">
-          Agree to terms and conditions
-        </label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </div> --}}
     <br>
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text" value="{{userFromDB.description}}">Description</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
+      <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
     </div>
     <br>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" value="{{userFromDB.aboutPet}}">About My Pet</span>
+      </div>
+      <textarea name="aboutPet" class="form-control" aria-label="With textarea"></textarea>
+    </div>
     <div class="form-row align-items-center">
       <div class="col-auto my-1">
         <label class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</label>
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select value="{{userFromDB.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
           <option selected>Choose...</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">More</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>More</option>
         </select>
       </div>
     </div>
