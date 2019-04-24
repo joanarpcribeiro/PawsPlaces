@@ -17,10 +17,13 @@ router.get('/profile-edit', (req, res, next) => {
 });
 
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  User.create({
+  User.findByIdAndUpdate(req.user._id, {
     name: req.body.name,
     password: req.body.password,
+    pictureUrl: req.body.pictureUrl,
+    username: req.body.username,
   })
+ 
     .then(() => {
       res.redirect('/profile-edit')
     })

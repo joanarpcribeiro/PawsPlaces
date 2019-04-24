@@ -9,6 +9,7 @@ const userSchema = new Schema({
   },
   password: String,
   name: String,
+  lastName: String,
   location: {
     type: String,
     required: false,
@@ -25,6 +26,7 @@ const userSchema = new Schema({
     default: "/images/P/defaultProfile.jpeg",
   },
   pet: String,
+  numbPet: String,
   aboutPet: String
 }, {
   timestamps: {
