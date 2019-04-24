@@ -1,20 +1,20 @@
-<h1>Validate</h1>
-
 <table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th>Picture</th>
-      <th>Action</th>
-    </tr>
-  </thead>
   <tbody>
-    {{#each places}}
+    {{#each filteredPlaces}}
     <tr>
-      <td>{{this.name}}</td>
-      <td><img src="{{this.pictureUrl}}"></td>
-      <td><a href="/places/{{this._id}}">Validate</a></td>
+      <td><a href="/admin/{{this._id}}/validate" class="btn btn-outline-primary">Validate</a></td>
+      <td><a href="/admin/{{this._id}}/delete" class="btn btn-outline-danger">Delete</a></td>
+      <td> {{this.name}}</td>
+      <td>{{this.address}}</td>
+      <td>{{this.postCode}}</td>
+      <td>{{this.description}}</td>
+      <td> {{this.neighbourhood}}</td>
+      <td>{{this.pictureURL}}</td>
+      <td>{{this.contactNumb}}</td>
+      <td>{{this.websiteURL}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.group}}</td>
+      <td>{{this.warning}}</td>
     </tr>
     {{/each}}
   </tbody>
