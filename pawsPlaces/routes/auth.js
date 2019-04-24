@@ -50,7 +50,9 @@ router.post("/sign-up", (req, res, next) => {
 
     newUser.save()
       .then(() => {
-        res.redirect("/");
+        passport.authenticate('local')(req, res, function () {
+          res.redirect('/');
+        })
       })
       .catch(err => {
         res.render("paws/sign-up", { message: "Something went wrong" });

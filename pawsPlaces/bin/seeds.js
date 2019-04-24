@@ -667,7 +667,7 @@ let users = [
     username: "alice",
     email: "alice@hotmail.com",
     password: bcrypt.hashSync("alice", bcrypt.genSaltSync(bcryptSalt)),
-    role: "LOGED_IN",
+    role: "USER",
     location: "Lisbon",
   },
   {
@@ -675,7 +675,7 @@ let users = [
     username: "bob",
     email: "bob@hotmail.com",
     password: bcrypt.hashSync("bob", bcrypt.genSaltSync(bcryptSalt)),
-    role: "NOT_REGISTER",
+    role: "USER",
     location: "Lisbon",
   },
   {

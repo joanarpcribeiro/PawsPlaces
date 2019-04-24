@@ -17,16 +17,15 @@ const userSchema = new Schema({
   description: String,
   role:{
     type: String,
-    enum: ['NOT_REGISTER', 'ADMIN', 'LOGED_IN'],
-    default: 'LOGED_IN'
-    // mais tarde podemos adicionar ADMIN
+    enum: ['ADMIN', 'USER'],
+    default: 'USER'
   },
   picture: {
     type: String,
     default: "/images/P/defaultProfile.jpeg",
   },
-  Pet: String,
-  About_pet: String
+  pet: String,
+  aboutPet: String
 }, {
   timestamps: {
     createdAt: 'created_at',
