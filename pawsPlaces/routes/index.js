@@ -51,4 +51,33 @@ router.get('/category/:category', (req, res, next) => {
     .catch(next)
 })
 
+//Routes to create a new place
+router.get('/create-place', (req,res,next)=> {
+  res.render('paws/create-place')
+
+})
+
+router.post('/create-place', (req,res,next)=> {
+  Place.create({
+    name: req.param.name,
+    address: req.param.address,
+    postCode: req.param.postCode,
+    description: req.param.description,
+    neighbourhood: req.param.neighbourhood,
+    pictureURL: req.param.pictureURL,
+    contactNumb: req.param.contactNumb,
+    websiteURL: req.param.websiteURL,
+    category: req.param.category,
+    group: req.param.group,
+    warning: req.param.warning
+  })
+  .then(createdPlace => {
+    console.log("The place was created, you are going to be redirected")
+    res.redirect('/create-place', {
+
+    })
+  })
+})
+
+
 module.exports = router;
