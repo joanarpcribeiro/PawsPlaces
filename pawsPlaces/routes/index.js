@@ -69,20 +69,6 @@ router.get('/create-place', (req,res,next)=> {
 })
 
 router.post('/create-place', (req, res, next) => {
-<<<<<<< HEAD
-  Place.create({      
-    name: req.param.name,
-    address: req.param.address,
-    postCode: req.param.postCode,
-    description: req.param.description,
-    neighbourhood: req.param.neighbourhood,
-    pictureURL: req.param.pictureURL,
-    contactNumb: req.param.contactNumb,
-    websiteURL: req.param.websiteURL,
-    category: req.param.category,
-    group: req.param.group,
-    warning: req.param.warning
-=======
   Place.create({
     name: req.body.name,
     address: req.body.address,
@@ -95,7 +81,6 @@ router.post('/create-place', (req, res, next) => {
     category: req.body.category,
     group: req.body.group,
     warning: req.body.warning
->>>>>>> df2c64d33f0c6717a152ad35862e07a0ee498c9e
   })
   .then(createdPlace => {
     console.log("The place was created, you are going to be redirected")
