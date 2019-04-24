@@ -1,1 +1,25 @@
 <h1>Add Place</h1>
+
+{{!-- Send the data to "POST /create-book" --}}
+<form action="/create-book" method="post">
+  Title
+  <input type="text" name="title" class="form-control">{{!-- Will define a req.body.title --}}
+  <br>
+  Description
+  <textarea name="description" class="form-control"></textarea> {{!-- Will define a req.body.description --}}
+  <br>
+  Author
+  <input type="text" name="author" class="form-control">{{!-- Will define a req.body.author --}}
+  <br>
+  Rating
+  <input type="number" name="rating" min="1" max="10" class="form-control">{{!-- Will define a req.body.rating --}}
+  <br>
+  Editor
+  <select name="_editor" class="form-control">
+    {{#each editors}}
+      <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <br>
+  <button type="submit" class="btn btn-primary">Create!</button>
+</form>
