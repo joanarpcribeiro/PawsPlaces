@@ -22,7 +22,7 @@ router.get('/profile-edit', checkConnected, (req, res, next) => {
 
 
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  User.findByIdAndUpdate(req.params._id, {
+  User.findByIdAndUpdate(req.user._id, {
     username: req.body.username,
     name: req.body.name,
     lastName: req.body.lastName,
@@ -33,7 +33,7 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
     picture: req.body.picture,
     pet: req.body.pet,
     numbPet: req.body.numbPet,
-    aboutPet: req.body.aboutPet,
+    aboutPet: req.body.aboutPet
   })
     .then(() => {
       res.redirect('/profile-view')
@@ -69,6 +69,20 @@ router.get('/create-place', (req,res,next)=> {
 })
 
 router.post('/create-place', (req, res, next) => {
+<<<<<<< HEAD
+  Place.create({      
+    name: req.param.name,
+    address: req.param.address,
+    postCode: req.param.postCode,
+    description: req.param.description,
+    neighbourhood: req.param.neighbourhood,
+    pictureURL: req.param.pictureURL,
+    contactNumb: req.param.contactNumb,
+    websiteURL: req.param.websiteURL,
+    category: req.param.category,
+    group: req.param.group,
+    warning: req.param.warning
+=======
   Place.create({
     name: req.body.name,
     address: req.body.address,
@@ -81,6 +95,7 @@ router.post('/create-place', (req, res, next) => {
     category: req.body.category,
     group: req.body.group,
     warning: req.body.warning
+>>>>>>> df2c64d33f0c6717a152ad35862e07a0ee498c9e
   })
   .then(() => {
     console.log("The place was created, you are going to be redirected")
