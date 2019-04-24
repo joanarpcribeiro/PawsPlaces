@@ -82,12 +82,41 @@ router.post('/create-place', (req, res, next) => {
     group: req.body.group,
     warning: req.body.warning
   })
-  .then(createdPlace => {
+  .then(() => {
     console.log("The place was created, you are going to be redirected")
-    res.redirect('paws/confirmation-place', {
-      createdPlace
-    })
+    res.redirect('/confirmation-place')
   })
+})
+
+router.get('/confirmation-place', (req,res,next)=> {
+  res.render('paws/confirmation-place')
+})
+
+router.get('/admin', (req, res, next) => {
+  Place.find()
+    .then((places) => {
+      //console.log(places)
+      const filteredPlaces = places.filter(one => one.isValidated === false)
+      //console.log(places)
+      res.render('paws/admin', { filteredPlaces })
+    })
+    .catch(next)
+})
+
+router.get('/admin/:placeId/delete', (req,res,next)=> { 
+  Place.findByIdAndDelete(req.params.placeId)
+    .then(() => {
+      res.redirect('/admin')
+    })
+    .catch(next)
+})
+
+router.get('/admin/:placeId/validate', (req,res,next)=> { 
+  Place.findByIdAndUpdate(req.params.placeId, {isValidated: true})
+    .then(() => {
+      res.redirect('/admin')
+    })
+    .catch(next)
 })
 
 module.exports = router;

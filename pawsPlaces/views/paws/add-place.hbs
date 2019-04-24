@@ -26,12 +26,41 @@
   Website:
   <input type="link" name="websiteURL" class="form-control">
   <br>
-  Category:
-  <input type="text" name="category" min="1" max="20" class="form-control">
-  
+  <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">What kind of place is it?</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <option selected>Choose...</option>
+          <option value="Restaurant">Restaurant</option>
+          <option value="Accomodation">Accomodation</option>
+          <option value="Garden">Garden</option>
+          <option value="Dog grooming">Dog grooming</option>
+          <option value="Public Transportation">Public Transportation</option>
+          <option value="Veterinarian">Veterinarian</option>
+          <option value="Pet shop">Pet shop</option>
+          <option value="Hospital">Hospital</option>
+          <option value="Shopping">Shopping</option>
+        </select>
+      </div>
+  </div>
   <br>
-  Sub-Category:
-  <input type="text" name="group" class="form-control">
+    <div class="form-row align-items-center">
+      <div class="col-auto my-1">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Does it have a sub category?</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+          <option selected>Choose...</option>
+          <option value="Hotel">Hotel</option>
+          <option value="Guesthouse">Guesthouse</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Hostel">Hostel</option>
+          <option value="Train">Train</option>
+          <option value="Metro, bus and tramway">Metro, bus tramway</option>
+          <option value="Express Bus">Express Bus</option>
+          <option value="Boat">Boat</option>
+          <option value="Bus">Bus</option>
+        </select>
+      </div>
+  </div>
   <br>
   Suggestions about location:
   <input type="text" name="warning" min="1" max="20" class="form-control">
