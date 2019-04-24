@@ -1,8 +1,11 @@
 const express = require('express');
+const multer  = require('multer');
+const Picture = require('../models/Picture');
 const router = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User'); 
 const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
+
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -22,7 +25,7 @@ router.get('/profile-edit', checkConnected, (req, res, next) => {
 
 
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  User.findByIdAndUpdate(req.params._id, {
+  User.findByIdAndUpdate(req.user._id, {
     username: req.body.username,
     name: req.body.name,
     lastName: req.body.lastName,
@@ -33,7 +36,7 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
     picture: req.body.picture,
     pet: req.body.pet,
     numbPet: req.body.numbPet,
-    aboutPet: req.body.aboutPet,
+    aboutPet: req.body.aboutPet
   })
     .then(() => {
       res.redirect('/profile-view')
@@ -63,33 +66,31 @@ router.get('/category/:category', (req, res, next) => {
 })
 
 //Routes to create a new place
-router.get('/create-place', (req, res, next) => {
-  res.render('paws/create-place')
+router.get('/create-place', (req,res,next)=> {
+  res.render('paws/add-place')
 
 })
 
 router.post('/create-place', (req, res, next) => {
   Place.create({
-    name: req.param.name,
-    address: req.param.address,
-    postCode: req.param.postCode,
-    description: req.param.description,
-    neighbourhood: req.param.neighbourhood,
-    pictureURL: req.param.pictureURL,
-    contactNumb: req.param.contactNumb,
-    websiteURL: req.param.websiteURL,
-    category: req.param.category,
-    group: req.param.group,
-    warning: req.param.warning
+    name: req.body.name,
+    address: req.body.address,
+    postCode: req.body.postCode,
+    description: req.body.description,
+    neighbourhood: req.body.neighbourhood,
+    pictureURL: req.body.pictureURL,
+    contactNumb: req.body.contactNumb,
+    websiteURL: req.body.websiteURL,
+    category: req.body.category,
+    group: req.body.group,
+    warning: req.body.warning
   })
-    .then(createdPlace => {
-      console.log("The place was created, you are going to be redirected")
-      res.redirect('/create-place', {
-
-      })
+  .then(createdPlace => {
+    console.log("The place was created, you are going to be redirected")
+    res.redirect('paws/confirmation-place', {
+      createdPlace
     })
+  })
 })
-
-
 
 module.exports = router;
