@@ -12,10 +12,22 @@ router.get('/', (req, res, next) => {
     })
 });
 
-//router.get('/', (req, res, next) => {
-//  res.render('paws/home-page')
-//})
+router.get('/profile-edit', (req, res, next) => {
+  res.render('paws/profile-edit')
+});
 
+router.post('/profile-edit', checkConnected, (req, res, next) => {
+  User.create({
+    name: req.body.name,
+    password: req.body.password,
+  })
+    .then(() => {
+      res.redirect('/profile-edit')
+    })
+    .catch(next)
+})
+
+// Display profile
 router.get('/profile-view', checkConnected, (req, res, next) => {
   User.findById(req.user._id)
     .then((userFromDB) => {
@@ -23,6 +35,7 @@ router.get('/profile-view', checkConnected, (req, res, next) => {
     })
     .catch(next)
 })
+
 
 
 // router.post('/profile-edit', checkConnected, (req, res, next) => {

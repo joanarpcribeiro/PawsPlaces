@@ -11,7 +11,8 @@ const userSchema = new Schema({
   name: String,
   location: {
     type: String,
-    required: false
+    required: false,
+    default: "Lisbon",
   },
   description: String,
   role:{
@@ -22,7 +23,7 @@ const userSchema = new Schema({
   },
   picture: {
     type: String,
-    default: "imagemACriarPorNos",
+    default: "/images/P/defaultProfile.jpeg",
   },
   Pet: String,
   About_pet: String

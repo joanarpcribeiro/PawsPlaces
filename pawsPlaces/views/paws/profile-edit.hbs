@@ -1,8 +1,120 @@
-<h1>My profile</h1>
 
 <form action="/profile-edit" method="post">
+  <section class="profile">
+
+    <h1>User Profile</h1>
+    <br>
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" value="{{userFromDB.picture}}">
+      </div>
+    </form>
+
+    {{!-- <form  style="margin-left:20%; margin-top:8%;"> --}}
+    <form class="needs-validation" novalidate>
+      <div class="md-4 mb-3">
+        <label for="validationCustomUsername">Username</label>
+        <div class="input-group" style="  width: 33%;">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+          </div>
+          <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
+            aria-describedby="inputGroupPrepend" required>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom01">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" placeholder="First name"
+            value="{{userFromDB.name}}" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationCustom02">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">City</label>
+          <input type="text" class="form-control" id="validationCustom03" placeholder="City"
+            value="{{userFromDB.location}}" required>
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <label class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">More</option>
+          </select>
+        </div>
+        <br>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" value="{{userFromDB.description}}">Description</span>
+          </div>
+          <textarea class="form-control" aria-label="With textarea"></textarea>
+        </div>
+        <br>
+        <div>
+          <br>
+          <button class="btn btn-primary" type="submit">Save</button>
+        </div>
+
+    </form>
+     {{!-- 
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function (form) {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+</script> --}}
+  </section>
+
+  {{!-- {{userFromDB.picture}} --}}
+
+</body>
 
 
 
-
-</form>
