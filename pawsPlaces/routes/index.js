@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Place = require("../models/Place");
-const User = require('../models/User');
+const User = require('../models/User'); 
 const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
 
 /* GET home page */
