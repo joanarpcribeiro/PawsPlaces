@@ -1,23 +1,27 @@
 <body style="background-color: lightgrey;">
 
-  <section class="sign">
+  <section class="profile">
     <a href="/profile-edit">Edit your profile</a>
 
     <form>
+      <h1>User Profile</h1>
       <div class="form-group">
-        <label for="exampleFormControlFile1">{{userFromDB.name}}</label>
+        <label for="exampleFormControlFile1" class="view-profile"><img src="{{userFromDB.picture}}"></label>
       </div>
       <br>
       <div class="form-group">
-        <label for="exampleFormControlFile1">{{userFromDB.username}}</label>
+        <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Name</span>
+        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.name}}</label>
       </div>
       <br>
       <div class="form-group">
-        <label for="exampleFormControlFile1"><img src="{{userFromDB.picture}}" alt=""></label>
+        <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">@</span>
+        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.username}}</label>
       </div>
       <br>
       <div class="form-group">
-        <label for="exampleFormControlFile1">{{userFromDB.location}}</label>
+        <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Location</span>
+        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.location}}</label>
       </div>
     </form>
   </section>

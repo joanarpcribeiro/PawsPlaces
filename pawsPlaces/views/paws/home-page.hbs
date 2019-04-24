@@ -8,37 +8,42 @@
 
   <section>
 
-<nav class="navbar navbar-expand-lg navbar-light navbar2hp" style="background-color: #31758a94;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-evenly;">
-    <div class="navbar-nav">
-      <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/restaurants">Restaurants</a>  
-      <a class="nav-item nav-link" href="/gardens">Gardens</a>
-      <a class="nav-item nav-link" href="/accomodation">Accomodation</a>
-      <a class="nav-item nav-link" href="/dog-grooming">Dog grooming</a>
-      <a class="nav-item nav-link" href="/public-transportation">Public Transportation</a>
-      <a class="nav-item nav-link" href="/veterinarian">Veterinarian</a>
-      <a class="nav-item nav-link" href="/pet-shop">Pet shop</a>
-      <a class="nav-item nav-link" href="/hospital">Hospital</a>
-      <a class="nav-item nav-link" href="/shopping">Shopping</a>
+    <nav class="navbar navbar-expand-lg navbar-light navbar2hp" style="background-color: #31758a94;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-evenly;">
+        <div class="navbar-nav">
+          <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="/restaurants">Restaurants</a>
+          <a class="nav-item nav-link" href="/gardens">Gardens</a>
+          <a class="nav-item nav-link" href="/accomodation">Accomodation</a>
+          <a class="nav-item nav-link" href="/dog-grooming">Dog grooming</a>
+          <a class="nav-item nav-link" href="/public-transportation">Public Transportation</a>
+          <a class="nav-item nav-link" href="/veterinarian">Veterinarian</a>
+          <a class="nav-item nav-link" href="/pet-shop">Pet shop</a>
+          <a class="nav-item nav-link" href="/hospital">Hospital</a>
+          <a class="nav-item nav-link" href="/shopping">Shopping</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <section>
+  <div class="row m-0">
+    {{!-- PLACES  --}}
+    {{#each places}}
+    <div class="col-sm-12 col-md-6 col-lg-4"
+      style="background-color: rgb(219, 219, 219); height: 500px; display:inline-block;">
+      <img class="card-img-top" src="{{this.pictureURL}}" style="width: 100%; height: 80%" alt="">
+      <div class="card-body">
+        <h5><a href="/restaurants" class="btn btn-dark">{{this.name}}</a></h5>
+        <p class="card-text">{{this.neighbourhood}}</p>
+      </div>
     </div>
+    {{/each}}
   </div>
-</nav>
-</section>
-  {{!-- PLACES  --}}
-  {{#each places}}
-  <div class=" col-md-6"
-    style="background-color: rgb(219, 219, 219); width: 31%; margin:20px; height: 500px; display:inline-block;">
-    <img class="card-img-top" src="{{this.pictureURL}}" style="width: 100%; height: 80%" alt="">
-    <div class="card-body">
-      <h5><a href="/restaurants" class="btn btn-dark">{{this.name}}</a></h5>
-      <p class="card-text">{{this.neighbourhood}}</p>
-    </div>
-  </div>
-  {{/each}}
+  </section>
 </section>
 
 <footer>
