@@ -63,12 +63,13 @@ router.get('/category/:category', (req, res, next) => {
 })
 
 //Routes to create a new place
-router.get('/create-place', (req, res, next) => {
-  res.render('paws/create-place')
+router.get('/create-place', (req,res,next)=> {
+  res.render('paws/add-place')
 
 })
 
 router.post('/create-place', (req, res, next) => {
+<<<<<<< HEAD
   Place.create({      
     name: req.param.name,
     address: req.param.address,
@@ -81,14 +82,27 @@ router.post('/create-place', (req, res, next) => {
     category: req.param.category,
     group: req.param.group,
     warning: req.param.warning
+=======
+  Place.create({
+    name: req.body.name,
+    address: req.body.address,
+    postCode: req.body.postCode,
+    description: req.body.description,
+    neighbourhood: req.body.neighbourhood,
+    pictureURL: req.body.pictureURL,
+    contactNumb: req.body.contactNumb,
+    websiteURL: req.body.websiteURL,
+    category: req.body.category,
+    group: req.body.group,
+    warning: req.body.warning
+>>>>>>> df2c64d33f0c6717a152ad35862e07a0ee498c9e
   })
-    .then(createdPlace => {
-      console.log("The place was created, you are going to be redirected")
-      res.redirect('/create-place', {
-
-      })
+  .then(createdPlace => {
+    console.log("The place was created, you are going to be redirected")
+    res.redirect('paws/confirmation-place', {
+      createdPlace
     })
+  })
 })
-
 
 module.exports = router;
