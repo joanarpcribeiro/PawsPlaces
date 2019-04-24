@@ -5,6 +5,7 @@ const router = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User'); 
 const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
+const uploadCloud = require('../config/cloudinary')
 
 
 /* GET home page */
@@ -23,26 +24,42 @@ router.get('/profile-edit', checkConnected, (req, res, next) => {
     .catch(next)
 })
 
-
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  User.findByIdAndUpdate(req.user._id, {
-    username: req.body.username,
-    name: req.body.name,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    location: req.body.location,
-    description: req.body.description,
-    password: req.body.password,
-    picture: req.body.picture,
-    pet: req.body.pet,
-    numbPet: req.body.numbPet,
-    aboutPet: req.body.aboutPet
-  })
+  if (req.file){
+    picture = req.file.url
+  } else {
+    picture = "/images/P/defaultProfile.jpeg"
+  }
+  const { username,
+    name,
+    lastName,
+    email,
+    location,
+    description,
+    password,
+    pet,
+    numbPet,
+    aboutPet} = req.body
+
+    const newUser = {username,
+      name,
+      lastName,
+      email,
+      location,
+      description,
+      password,
+      picture,
+      pet,
+      numbPet,
+      aboutPet}
+
+  User.findByIdAndUpdate(req.user._id, { newUser })
     .then(() => {
       res.redirect('/profile-view')
     })
     .catch(next)
 })
+
 
 // Display profile
 router.get('/profile-view', checkConnected, (req, res, next) => {
@@ -121,5 +138,16 @@ router.get('/admin/:placeId/validate', (req,res,next)=> {
     })
     .catch(next)
 })
+
+
+router.post('/upload', uploadCloud.single('photo'), (req, res) => {
+  User.findByIdAndUpdate(req.user._id, {
+    picture: req.file.url
+  })
+  .then(() =>{
+    res.redirect('/profile-view')
+  })
+});
+
 
 module.exports = router;

@@ -671,7 +671,7 @@ let users = [
     location: "Lisbon",
     lastName: "",
     description: "",
-    picture: "",
+    picture: "/images/P/defaultProfile.jpeg",
     pet:"",
     numbPet: "",
     aboutPet: "",
