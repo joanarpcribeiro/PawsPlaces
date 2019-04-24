@@ -1,25 +1,40 @@
 <h1>Add Place</h1>
 
 {{!-- Send the data to "POST /create-book" --}}
-<form action="/create-book" method="post">
-  Title
-  <input type="text" name="title" class="form-control">{{!-- Will define a req.body.title --}}
+<form action="/create-place" method="post">
+  Name
+  <input type="text" name="name" class="form-control">
+  <br>
+  Address
+  <input type="text" name="address" class="form-control"> {{!-- Will define a req.body.description --}}
+  <br>
+  Post Code
+  <input type="text" name="postCode" class="form-control">{{!-- Will define a req.body.author --}}
   <br>
   Description
-  <textarea name="description" class="form-control"></textarea> {{!-- Will define a req.body.description --}}
+  <input type="text" name="description" min="1" max="20" class="form-control">{{!-- Will define a req.body.rating --}}
   <br>
-  Author
-  <input type="text" name="author" class="form-control">{{!-- Will define a req.body.author --}}
+  Neighbourhood
+  <input type="text" name="neighbourhood" class="form-control">
   <br>
-  Rating
-  <input type="number" name="rating" min="1" max="10" class="form-control">{{!-- Will define a req.body.rating --}}
+  Picture
+  <input type="text" name="pictureURL" class="form-control">
   <br>
-  Editor
-  <select name="_editor" class="form-control">
-    {{#each editors}}
-      <option value="{{this._id}}">{{this.name}}</option>
-    {{/each}}
-  </select>
+  Contact Number:
+  <input type="text" name="contactNumb" class="form-control">
+  <br>
+  Website:
+  <input type="link" name="websiteURL" class="form-control">
+  <br>
+  Category:
+  <input type="text" name="category" min="1" max="20" class="form-control">
+  
+  <br>
+  Sub-Category:
+  <input type="text" name="group" class="form-control">
+  <br>
+  Suggestions about location:
+  <input type="text" name="warning" min="1" max="20" class="form-control">
   <br>
   <button type="submit" class="btn btn-primary">Create!</button>
 </form>
