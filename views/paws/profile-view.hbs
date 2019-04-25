@@ -4,20 +4,26 @@
 
     <form class="sign form-user-profile">
 
-      <a href="/profile-edit">Edit your profile</a>
-      <br>
-      <h1 class="mt-5">User Profile</h1>
-      <br>
+      <h1 class="ml-2">User Profile</h1>
 
-      <table class="table-bordered ml-10 border border-0 w-100">
-        <tbody class="border border-0 d-flex flex-column ">
-          <td class="p-2">{{user.name}}</td>
-          <td class="p-2">@ {{user.username}}</td>
-          <td  class="p-2" style="border: none;"><img class="profile-img" src="{{user.picture}}" /></td>
+      <table class="table table-bordered md-4 mb-3 m-auto border-0 d-flex justify-content-center">
+        <tbody class="border border-0 d-flex flex-row d-flex align-items-center ">
+          <tr>
+            <th style="border: none;"><img class="profile-img" src="{{user.picture}}" />
+              <br>
+              <br>
+              <a class="th-style" href="/profile-edit">Edit your profile</a>
+          </tr>
+          <tr>
+            <th class="p-2">{{user.name}}</th>
+          </tr>
+          <tr>
+          <th class="p-2">@ {{user.username}}</th>
+          </tr>
         </tbody>
       </table>
 
-  
+
       <table class="table-bordered ml-10 border border-0">
         <tbody class="border border-0">
           {{!-- <tr>
