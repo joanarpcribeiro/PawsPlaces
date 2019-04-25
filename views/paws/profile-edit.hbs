@@ -15,111 +15,116 @@
         class="form-control-file" id="exampleFormControlFile1" value="{{user.picture}}"> --}}
 {{!-- </div> --}}
 
-<section class="sign">
-  <h2>Upload your photo</h2>
-  <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline">
+<section class="sign m-auto">
+  <div class="container">
+  <h4 class="m-auto">Upload your photo</h4>
+  <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline m-auto">
     <input type="file" name="photo" class="form-control">
     <input type="submit" value="Save" class="btn btn-outline-primary">
   </form>
 
   <form action="/profile-edit" method="post">
-    <h2 class="mt-5">Edit your profile</h2>
-    
-    <table class="table-bordered md-4 mb-3">
-        <tbody>
-          <tr>
-            <th>Username</th>
-            <td><input name="username" type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-          value="{{user.username}}" aria-describedby="inputGroupPrepend" required>        <div class="invalid-feedback">
-          Please choose a username.
-        </div></td>
-          </tr>
-          <tr>
-            <th scope="row">Picture</th>
-            <td><img class="profile-img" src="{{user.picture}}"/></td>
-          </tr>
-          <tr>
-            <th>Name</th>
-            <td><input name="name" type="text" class="form-control" id="validationCustom01" placeholder="First name"
-          value="{{user.name}}">
-        <div class="valid-feedback">
-          Looks good!
-        </div></td>
-          </tr>
-          <tr>
-            <th>Last Name</th>
-            <td><input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-          value="{{user.lastName}}"></div></td>
-          </tr>
-          <tr>
-          <th>Location</th>
-            <td><input name="location" type="text" class="form-control" id="validationCustom03" placeholder="City"
-          value="{{user.location}}"><div class="invalid-feedback">Please provide a valid city.</div></td>
-          </tr>
-          <tr>
-            <th>Let us know more about you</th>
-            <td><div class="input-group">
-      <div class="input-group-prepend">
-        <span value="{{user.aboutPet}}"></span>
-      </div>
-      <textarea name="aboutPet" class="form-control" aria-label="With textarea"></textarea>
-    </div></td>
-          </tr>
-          <tr>
-            <th>Pet name</th>
-            <td>{{user.pet}}</td>
-          </tr>
-          <tr>
-            <th>How many pets do you have?</th>
-            <td>{{user.numbPet}}</td>
-          </tr>
-          <tr>
-            <th>About your Pet</th>
-            <td>{{user.aboutPet}}</td>
-          </tr>
-        </tbody>
-      </table>
+    <h2 class="m-auto">Edit your profile</h2>
 
-        <div class="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div>
+    <table class="table-bordered md-4 mb-3 m-auto">
+      <tbody>
+        <tr>
+          <th>Username</th>
+          <td><input name="username" type="text" class="form-control" id="validationCustomUsername"
+              placeholder="Username" value="{{user.username}}" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Picture</th>
+          <td><img class="profile-img" src="{{user.picture}}" /></td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td><input name="name" type="text" class="form-control" id="validationCustom01" placeholder="First name"
+              value="{{user.name}}">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td><input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
+              value="{{user.lastName}}"></div>
+          </td>
+        </tr>
+        <tr>
+          <th>Location</th>
+          <td><input name="location" type="text" class="form-control" id="validationCustom03" placeholder="City"
+              value="{{user.location}}">
+            <div class="invalid-feedback">Please provide a valid city.</div>
+          </td>
+        </tr>
+        <tr>
+          <th>Let us know more about you</th>
+          <td>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span value="{{user.aboutPet}}"></span>
+              </div>
+              <textarea name="aboutPet" class="form-control" aria-label="With textarea"></textarea>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Pet name</th>
+          <td>{{user.pet}}</td>
+        </tr>
+        <tr>
+          <th>How many pets do you have?</th>
+          <td>{{user.numbPet}}</td>
+        </tr>
+        <tr>
+          <th class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</th>
+          <td><select value="{{user.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Choose...</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>More</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>About your Pet</th>
+          <td>{{user.aboutPet}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="invalid-feedback">
+      Please choose a username.
     </div>
-    <div class="form-row">
+    </div>
+    </div>
+    {{!-- <div class="form-row">
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">First name</label>
-        
+
       </div>
       <div class="col-md-4 mb-3">
         <label for="validationCustom02">Last name</label>
 
-    </div>
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <label for="validationCustom03">City</label>
-
       </div>
-    </div>
-    <br>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">City</label>
 
-    <br>
-
-    <div class="form-row align-items-center">
-      <div class="col-auto my-1">
-        <label class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</label>
-        <select value="{{user.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-          <option selected>Choose...</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>More</option>
-        </select>
-      </div>
-    </div>
-    <div>
+        </div>
+      </div> --}}
       <br>
-      <button class="btn btn-primary" type="submit">Save</button>
-    </div>
+      <div>
+        <br>
+        <button class="btn btn-primary" type="submit">Save</button>
+      </div>
   </form>
-
+</div>
 </section>

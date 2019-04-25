@@ -670,7 +670,7 @@ let users = [
     location: "Lisbon",
     lastName: "",
     description: "",
-    picture: "/images/P/defaultProfile.jpeg",
+    picture: "/images/P/smart.jpg",
     pet:"",
     numbPet: "",
     aboutPet: "",
