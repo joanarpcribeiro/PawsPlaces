@@ -12,6 +12,7 @@ const path         = require('path');
 const session    = require("express-session");
 const MongoStore = require('connect-mongo')(session);
 const flash      = require("connect-flash");
+const { checkAdmin } = require('./middlewares')
 
 
 
@@ -89,12 +90,12 @@ app.use((req,res,next) => {
   // res.locals.isConnected = req.user && req.user.role === 'LOGED_IN'
   next()
 })
-    
-const index = require('./routes/index');
-app.use('/', index);
 
-const authRoutes = require('./routes/auth');
-app.use('/auth', authRoutes);
+
+    
+app.use('/', require('./routes/index'));
+app.use('/auth', require('./routes/auth'));
+app.use('/admin', checkAdmin,  require('./routes/admin'));
     
 
 module.exports = app;

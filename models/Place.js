@@ -10,7 +10,7 @@ const placeSchema = new Schema({
   address: {
     type: String,
     required: true,
-    min: 4
+    minLength: 4
   },
   postCode: String,
   description: String,
