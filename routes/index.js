@@ -71,14 +71,14 @@ router.get('/create-place', (req,res,next)=> {
 
 })
 
-router.post('/create-place', (req, res, next) => {
+router.post('/create-place', uploadCloud.single('photo'), (req, res, next) => {
   Place.create({
     name: req.body.name,
     address: req.body.address,
     postCode: req.body.postCode,
     description: req.body.description,
     neighbourhood: req.body.neighbourhood,
-    pictureURL: req.body.pictureURL,
+    pictureURL: req.file.url,
     contactNumb: req.body.contactNumb,
     websiteURL: req.body.websiteURL,
     category: req.body.category,

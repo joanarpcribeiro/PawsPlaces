@@ -22,7 +22,7 @@ const userSchema = new Schema({
   },
   picture: {
     type: String,
-    default: "/images/P/defaultProfile.jpeg",
+    default: "/images/P/smart.jpg",
   },
   pet: String,
   numbPet: String,
