@@ -1,103 +1,42 @@
-<body style="background-color: lightgrey;">
+<body>
 
-  <section class="container ">
+  <section class="sign m-auto container ">
 
     <form class="sign form-user-profile">
+      <h1 class="ml-2 mb-5">User Profile</h1>
 
-      <h1 class="ml-2">User Profile</h1>
+      <section class="md-4 mb-3 m-auto w-100 d-flex justify-content-center ">
+        <div>
+          <div class=" " style="border:none;"><img class="profile-img" src="{{user.picture}}" /></div>
+          <a class="font-view pt-3" href="/profile-edit">Edit your profile</a>
+        </div>
+        <div class="border-0 d-flex align-items-center">
+          <div class="d-flex flex-column justify-content-center">
+            <span class="mr-sm-2 font-view border-0 text-center"> {{user.name}} {{user.lastName}}</span>
+            <span class="mr-sm-2 font-view border-0 text-center"> @ {{user.username}}</span>
+            <span class="mr-sm-2 font-view border-0 text-center"> 📍 {{user.location}} </span>
+          </div>
+        </div>
+      </section>
 
-      <table class="table table-bordered md-4 mb-3 m-auto border-0 d-flex justify-content-center">
-        <tbody class="border border-0 d-flex flex-row d-flex align-items-center ">
-          <tr>
-            <th style="border: none;"><img class="profile-img" src="{{user.picture}}" />
-              <br>
-              <br>
-              <a class="th-style" href="/profile-edit">Edit your profile</a>
-          </tr>
-          <tr>
-            <th class="p-2">{{user.name}}</th>
-          </tr>
-          <tr>
-          <th class="p-2">@ {{user.username}}</th>
-          </tr>
-        </tbody>
-      </table>
-
-
-      <table class="table-bordered ml-10 border border-0">
-        <tbody class="border border-0">
-          {{!-- <tr>
-            <th class="th-style">Name</th>
-            <td class="th-style">{{user.name}}</td>
-          </tr> --}}
-          <tr>
-            <th class="th-style">Last Name</th>
-            <td class="th-style">{{user.lastName}}</td>
-          </tr>
-          {{!-- <tr>
-            <th class="th-style">Location</th>
-            <td class="th-style">{{user.location}}</td>
-          </tr> --}}
-          {{!-- <tr>
-            <th class="th-style">Let us know more about you</th>
-            <td class="th-style">{{user.description}}</td>
-          </tr> --}}
-          <tr>
-            <th class="th-style">Pet name</th>
-            <td class="th-style">{{user.pet}}</td>
-          </tr>
-          <tr>
-            <th class="th-style">How many pets do you have?</th>
-            <td>{{user.numbPet}}</td>
-          </tr>
-          <tr>
-            <th class="th-style">About your Pet</th>
-            <td>{{user.aboutPet}}</td>
-          </tr>
-        </tbody>
-      </table>
-
-
-
-
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Name</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.name}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Last Name</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.lastName}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">@</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.username}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Location</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.location}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Description</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.description}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Pet Name</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.pet}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Number of Pets</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.numbPet}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- <br> --}}
-      {{!-- <div class="form-group"> --}}
-      {{!-- <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">About Pet</span> --}}
-      {{!-- <label for="exampleFormControlFile1" class="view-profile">{{user.aboutPet}}</label> --}}
-      {{!-- </div> --}}
-      {{!-- </form> --}}
-      {{!-- </section> --}}
+      <section class="sign m-auto container">
+        <table class="ml-10  border-0" style="margin-top: 50px;">
+          <tbody class="border-box">
+            <tr>
+              <th class="div-style border-box" id="th">Pet name</th>
+              <td class="about-table border-box">{{user.pet}}</td>
+            </tr>
+            <tr>
+              <th class="div-style border-box" id="th">About your Pet</th>
+              <td class="about-table border-box">{{user.aboutPet}}</td>
+            </tr>
+            <tr>
+              <th class="div-style border-box" id="th">About me</th>
+              <td class="about-table border-box">{{user.description}}</td>
+            </tr>
+            <tr>
+              <th class="div-style border-box" id="th">How many pets do you have?</th>
+              <td class="about-table border-box">{{user.numbPet}}</td>
+            </tr>
+          </tbody>
+        </table>

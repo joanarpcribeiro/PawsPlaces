@@ -16,7 +16,8 @@
 {{!-- </div> --}}
 
 <section class="sign m-auto container">
-
+  <a class="div-style pt-3 mt-1" href="/profile-view">Back to profile</a>
+  <br>
   <form action="/profile-edit" method="post">
     <h2 class="m-auto">Edit your profile</h2>
 
@@ -48,7 +49,7 @@
           <th>Last Name</th>
           <td><input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
               value="{{user.lastName}}">
-              <div class="invalid-feedback">Please provide a valid last name</div>
+            <div class="invalid-feedback">Please provide a valid last name</div>
           </td>
         </tr>
         <tr>
@@ -59,17 +60,14 @@
           </td>
         </tr>
         <tr>
-          <th>Let us know more about you</th>
-          <td>
-            <div class="input-group">
-              <textarea name="description" class="form-control" aria-label="With textarea">{{user.description}}</textarea>
-            </div>
-          </td>
-        </tr>
-        <tr>
           <th>Pet name</th>
           <td><input name="pet" type="text" class="form-control" id="validationCustom02" placeholder="Fluffy"
               value="{{user.pet}}"></td>
+        </tr>
+        <tr>
+          <th>About your Pet</th>
+          <td><input name="aboutPet" type="text" class="form-control" id="validationCustom02" placeholder="Bubbly"
+              value="{{user.aboutPet}}"></td>
         </tr>
         <tr>
           <th class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</th>
@@ -82,15 +80,19 @@
           </td>
         </tr>
         <tr>
-          <th>About your Pet</th>
-          <td><input name="aboutPet" type="text" class="form-control" id="validationCustom02" placeholder="Bubbly"
-              value="{{user.aboutPet}}"></td>
+          <th>Let us know more about you</th>
+          <td>
+            <div class="input-group">
+              <textarea name="description" class="form-control"
+                aria-label="With textarea">{{user.description}}</textarea>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
 
     <div class="text-center m-3">
-    <button class="btn btn-primary" type="submit">Save</button>
+      <button class="btn btn-primary" type="submit">Save</button>
     </div>
     {{!-- <div class="form-row">
       <div class="col-md-4 mb-3">

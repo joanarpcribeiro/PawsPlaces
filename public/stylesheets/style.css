@@ -7123,10 +7123,9 @@ button:hover {
 .form-user-profile {
   margin: 40px;
   min-height: 750px;
-  max-width: 100%;
-  width: 100%; }
+  max-width: 100%; }
   .form-user-profile table {
-    height: 300px;
+    height: 200px;
     width: 100%; }
 
 .category-title {
@@ -7138,10 +7137,23 @@ button:hover {
 .card-style {
   margin: 18px; }
 
-.th-style {
+.div-style {
   font-size: 18px;
-  width: 100%;
   padding-left: 20px; }
+
+.font-view {
+  font-size: 23px;
+  padding-left: 20px; }
+
+.about-table {
+  color: rgba(83, 52, 16, 0.616);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 450px; }
+
+#th {
+  width: 850px; }
 
 .card-container {
   display: flex;
@@ -7156,5 +7168,8 @@ button:hover {
   height: 100px;
   width: 100px;
   object-fit: cover; }
+
+.border-box {
+  border: 1px solid rgba(131, 131, 131, 0.418); }
 
 /*# sourceMappingURL=style.css.map */
