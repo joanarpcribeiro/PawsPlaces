@@ -5,48 +5,47 @@
     <form class="sign form-user-profile">
 
       <a href="/profile-edit">Edit your profile</a>
-
+      <br>
       <h1 class="mt-5">User Profile</h1>
       <br>
+
+      <table class="table-bordered ml-10 border border-0 w-100">
+        <tbody class="border border-0 d-flex flex-column ">
+          <td class="p-2">{{user.name}}</td>
+          <td class="p-2">@ {{user.username}}</td>
+          <td  class="p-2" style="border: none;"><img class="profile-img" src="{{user.picture}}" /></td>
+        </tbody>
+      </table>
+
+  
       <table class="table-bordered ml-10 border border-0">
         <tbody class="border border-0">
+          {{!-- <tr>
+            <th class="th-style">Name</th>
+            <td class="th-style">{{user.name}}</td>
+          </tr> --}}
           <tr>
-            <td style="border: none;"><img class="profile-img" style="margin-left: 50%;" src="{{user.picture}}" /></td>
+            <th class="th-style">Last Name</th>
+            <td class="th-style">{{user.lastname}}</td>
+          </tr>
+          {{!-- <tr>
+            <th class="th-style">Location</th>
+            <td class="th-style">{{user.location}}</td>
+          </tr> --}}
+          {{!-- <tr>
+            <th class="th-style">Let us know more about you</th>
+            <td class="th-style">{{user.description}}</td>
+          </tr> --}}
+          <tr>
+            <th class="th-style">Pet name</th>
+            <td class="th-style">{{user.pet}}</td>
           </tr>
           <tr>
-            <th>Username</th>
-            <td>{{user.username}}</td>
-          </tr>
-          <tr>
-            <th>Name</th>
-            <td>{{user.name}}</td>
-          </tr>
-          <tr>
-            <th>Last Name</th>
-            <td>{{user.lastname}}</td>
-          </tr>
-          <tr>
-            <th>Username</th>
-            <td>{{user.username}}</td>
-          </tr>
-          <tr>
-            <th>Location</th>
-            <td>{{user.location}}</td>
-          </tr>
-          <tr>
-            <th>Let us know more about you</th>
-            <td>{{user.description}}</td>
-          </tr>
-          <tr>
-            <th>Pet name</th>
-            <td>{{user.pet}}</td>
-          </tr>
-          <tr>
-            <th>How many pets do you have?</th>
+            <th class="th-style">How many pets do you have?</th>
             <td>{{user.numbPet}}</td>
           </tr>
           <tr>
-            <th>About your Pet</th>
+            <th class="th-style">About your Pet</th>
             <td>{{user.aboutPet}}</td>
           </tr>
         </tbody>
