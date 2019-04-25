@@ -97,6 +97,8 @@ router.get('/confirmation-place', (req,res,next)=> {
 
 
 router.post('/upload', uploadCloud.single('photo'), (req, res) => {
+  console.log("TCL: req.file.url", req.file.url)
+  
   User.findByIdAndUpdate(req.user._id, {
     picture: req.file.url
   })

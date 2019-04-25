@@ -15,12 +15,12 @@
         class="form-control-file" id="exampleFormControlFile1" value="{{user.picture}}"> --}}
 {{!-- </div> --}}
 
-<section class="sign m-auto">
+<section class="sign m-auto container">
 
   <form action="/profile-edit" method="post">
     <h2 class="m-auto">Edit your profile</h2>
 
-    <table class="table-bordered md-4 mb-3 m-auto">
+    <table class="table table-bordered md-4 mb-3 m-auto">
       <tbody>
         <tr>
           <th>Username</th>
@@ -47,7 +47,8 @@
         <tr>
           <th>Last Name</th>
           <td><input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-              value="{{user.lastName}}"></div>
+              value="{{user.lastName}}">
+              <div class="invalid-feedback">Please provide a valid last name</div>
           </td>
         </tr>
         <tr>
@@ -61,20 +62,14 @@
           <th>Let us know more about you</th>
           <td>
             <div class="input-group">
-              <div class="input-group-prepend">
-                <span value="{{user.aboutPet}}"></span>
-              </div>
-              <textarea name="aboutPet" class="form-control" aria-label="With textarea"></textarea>
+              <textarea name="description" class="form-control" aria-label="With textarea">{{user.description}}</textarea>
             </div>
           </td>
         </tr>
         <tr>
           <th>Pet name</th>
-          <td>{{user.pet}}</td>
-        </tr>
-        <tr>
-          <th>How many pets do you have?</th>
-          <td>{{user.numbPet}}</td>
+          <td><input name="pet" type="text" class="form-control" id="validationCustom02" placeholder="Fluffy"
+              value="{{user.pet}}"></td>
         </tr>
         <tr>
           <th class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</th>
@@ -88,15 +83,14 @@
         </tr>
         <tr>
           <th>About your Pet</th>
-          <td>{{user.aboutPet}}</td>
+          <td><input name="aboutPet" type="text" class="form-control" id="validationCustom02" placeholder="Bubbly"
+              value="{{user.aboutPet}}"></td>
         </tr>
       </tbody>
     </table>
 
-    <div class="invalid-feedback">
-      Please choose a username.
-    </div>
-    </div>
+    <div class="text-center m-3">
+    <button class="btn btn-primary" type="submit">Save</button>
     </div>
     {{!-- <div class="form-row">
       <div class="col-md-4 mb-3">
@@ -113,18 +107,13 @@
 
         </div>
       </div> --}}
-    <br>
-     <div class="container m-auto">
-      <h4 class="m-auto">Upload your photo</h4>
-      <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline m-auto">
-        <input type="file" name="photo" class="form-control">
-        <input type="submit" value="Save" class="btn btn-outline-primary">
-      </form>
-    </div>
-    <div>
-      <br>
+  </form>
+
+  <h2 class="m-auto">Upload your photo</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data" class="">
+    <input type="file" name="photo" class="form-control">
+    <div class="text-center m-3">
       <button class="btn btn-primary" type="submit">Save</button>
     </div>
   </form>
-  </div>
 </section>

@@ -1,20 +1,53 @@
-<table>
+<table class="table table-bordered md-4 mb-3 m-auto">
   <tbody>
     {{#each filteredPlaces}}
     <tr>
-      <td><a href="/admin/{{this._id}}/validate" class="btn btn-outline-primary">Validate</a></td>
-      <td><a href="/admin/{{this._id}}/delete" class="btn btn-outline-danger">Delete</a></td>
+    <tr>
+      <th>Location name</th>
       <td> {{this.name}}</td>
+    </tr>
+    <tr>
+      <th>Address</th>
       <td>{{this.address}}</td>
+    </tr>
+    <tr>
+      <th>Post Code</th>
       <td>{{this.postCode}}</td>
+    </tr>
+    <tr>
+      <th>Description</th>
       <td>{{this.description}}</td>
+    </tr>
+    <tr>
+      <th>Neighbourhood</th>
       <td> {{this.neighbourhood}}</td>
-      <td>{{this.pictureURL}}</td>
+    </tr>
+    <tr>
+      <th>Picture</th>
+      <td class="card-container"> <img src="{{this.pictureURL}}" class="imgValidate"></td>
+    </tr>
+    <tr>
+      <th>Contact Number</th>
       <td>{{this.contactNumb}}</td>
+    </tr>
+    <tr>
+      <th>Website</th>
       <td>{{this.websiteURL}}</td>
+    </tr>
+    <tr>
+      <th>Category</th>
       <td>{{this.category}}</td>
+    </tr>
+    <tr>
+      <th>Sub Category</th>
       <td>{{this.group}}</td>
+    </tr>
+    <tr>
+      <th>Advice</th>
       <td>{{this.warning}}</td>
+    </tr>
+    <td><a href="/admin/{{this._id}}/validate" class="btn btn-outline-primary">Validate</a></td>
+    <td><a href="/admin/{{this._id}}/delete" class="btn btn-outline-danger">Delete</a></td>
     </tr>
     {{/each}}
   </tbody>

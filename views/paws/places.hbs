@@ -1,7 +1,8 @@
 <h1 class="category-title">All {{category}}s</h1>
 
+<div class="card-container">
 {{#each places}}
-<div class="card d-inline-flex card-style" style="width: 18rem;">
+<div class="card card-style" style="width: 18rem;">
     <img src="{{this.pictureURL}}" class="card-img-top" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
@@ -9,9 +10,11 @@
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            <p><a target="_blank" href="https://www.google.com/maps/place/{{this.address}}, {{this.postCode}}, {{this.neighbourhood}}">{{this.address}} <br>
-            {{this.postCode}} <br>
-            {{this.neighbourhood}}</a></p>
+            <p><a target="_blank"
+                    href="https://www.google.com/maps/place/{{this.address}}, {{this.postCode}}, {{this.neighbourhood}}">{{this.address}}
+                    <br>
+                    {{this.postCode}} <br>
+                    {{this.neighbourhood}}</a></p>
         </li>
         <li class="list-group-item">{{this.contactNumb}}</li>
     </ul>
@@ -21,4 +24,4 @@
 </div>
 {{/each}}
 
-
+</div>
