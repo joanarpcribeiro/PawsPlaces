@@ -3,24 +3,24 @@
 <h1>Add Place</h1>
 
 {{!-- Send the data to "POST /create-book" --}}
-<form action="/create-place" method="post">
-  Name
-  <input type="text" name="name" class="form-control">
+<form action="/create-place" method="post" enctype="multipart/form-data">
+  <p></p> Name
+  <input type="text" name="name" class="form-control" required>
   <br>
-  Address
-  <input type="text" name="address" class="form-control"> {{!-- Will define a req.body.description --}}
+  <p></p> Address
+  <input type="text" name="address" class="form-control" required>
   <br>
-  Post Code
-  <input type="text" name="postCode" class="form-control">{{!-- Will define a req.body.author --}}
+  <p></p> Post Code
+  <input type="text" name="postCode" class="form-control">
   <br>
-  Description
-  <input type="text" name="description" min="1" max="20" class="form-control">{{!-- Will define a req.body.rating --}}
+  <p></p> Description
+  <input type="text" name="description" min="1" max="20" class="form-control">
   <br>
-  Neighbourhood
+  <p></p> Neighbourhood
   <input type="text" name="neighbourhood" class="form-control">
   <br>
   Picture
-  <input type="text" name="pictureURL" class="form-control">
+  <input type="file" name="photo" class="form-control" required>
   <br>
   Contact Number:
   <input type="text" name="contactNumb" class="form-control">
@@ -31,7 +31,7 @@
   <div class="form-row align-items-center">
       <div class="col-auto my-1">
         <label class="mr-sm-2" for="inlineFormCustomSelect">What kind of place is it?</label>
-        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select name="category" class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
           <option selected>Choose...</option>
           <option value="Restaurant">Restaurant</option>
           <option value="Accomodation">Accomodation</option>
@@ -42,6 +42,7 @@
           <option value="Pet shop">Pet shop</option>
           <option value="Hospital">Hospital</option>
           <option value="Shopping">Shopping</option>
+          <option value="Other">Other</option>
         </select>
       </div>
   </div>

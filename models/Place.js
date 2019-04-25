@@ -20,7 +20,7 @@ const placeSchema = new Schema({
   websiteURL: String,
   category: {
     type: String,
-    enum: ["Restaurant", "Accomodation", "Garden", "Dog grooming", "Public Transportation", "Veterinarian", "Pet shop", "Hospital", "Shopping"]
+    enum: ["Restaurant", "Accomodation", "Garden", "Dog grooming", "Public Transportation", "Veterinarian", "Pet shop", "Hospital", "Shopping", "Other"]
   },
   group: {
     type: String,
