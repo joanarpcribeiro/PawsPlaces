@@ -8,7 +8,7 @@
 // }
 
 body { 
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Muli', sans-serif;
   margin:0;}
 
 button:hover {
@@ -112,4 +112,11 @@ img {
     height: 800px ;
     width: 100%;
   }
+}
+
+.category-title {
+  text-align: center;
+  margin: 20px;
+  color: rgb(92, 55, 60);
+  font-weight: bold;
 }

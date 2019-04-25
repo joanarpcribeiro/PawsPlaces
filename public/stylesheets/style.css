@@ -7021,7 +7021,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Muli', sans-serif;
   margin: 0; }
 
 button:hover {
@@ -7127,5 +7127,11 @@ button:hover {
   .form-user-profile table {
     height: 800px;
     width: 100%; }
+
+.category-title {
+  text-align: center;
+  margin: 20px;
+  color: #5c373c;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
