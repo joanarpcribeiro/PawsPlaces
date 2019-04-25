@@ -22,7 +22,6 @@ router.post('/profile-edit', (req, res, next) => {
     email,
     location,
     description,
-    password,
     pet,
     numbPet,
     aboutPet} = req.body
@@ -34,7 +33,6 @@ router.post('/profile-edit', (req, res, next) => {
       email,
       location,
       description,
-      password,
       pet,
       numbPet,
       aboutPet}
