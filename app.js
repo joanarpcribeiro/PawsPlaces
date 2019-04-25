@@ -85,9 +85,6 @@ app.use((req,res,next) => {
 
   // Define a view variable named `connectedUser`
   res.locals.isAdmin = req.user && req.user.role === 'ADMIN'
-
-  // Define a view variable named `isConnected`
-  // res.locals.isConnected = req.user && req.user.role === 'LOGED_IN'
   next()
 })
 
