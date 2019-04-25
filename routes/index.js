@@ -1,6 +1,5 @@
 const express = require('express');
 const multer  = require('multer');
-const Picture = require('../models/Picture');
 const router = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User'); 
@@ -10,26 +9,18 @@ const uploadCloud = require('../config/cloudinary')
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  Place.find().limit(6)
+  Place.find({isValidated: true})
+    .limit(6)
     .then(places => {
       res.render('paws/home-page', { places });
     })
 });
 
 router.get('/profile-edit', checkConnected, (req, res, next) => {
-  User.findById(req.user._id)
-    .then((userFromDB) => {
-      res.render('paws/profile-edit', { userFromDB })
-    })
-    .catch(next)
+  res.render('paws/profile-edit', { user: req.user })
 })
 
 router.post('/profile-edit', checkConnected, (req, res, next) => {
-  if (req.file){
-    picture = req.file.url
-  } else {
-    picture = "/images/P/defaultProfile.jpeg"
-  }
   const { username,
     name,
     lastName,
@@ -40,20 +31,20 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
     pet,
     numbPet,
     aboutPet} = req.body
+		console.log("TCL: req.body", req.body)
 
-    const newUser = {username,
+    const updates = {username,
       name,
       lastName,
       email,
       location,
       description,
       password,
-      picture,
       pet,
       numbPet,
       aboutPet}
 
-  User.findByIdAndUpdate(req.user._id, { newUser })
+  User.findByIdAndUpdate(req.user._id, updates)
     .then(() => {
       res.redirect('/profile-view')
     })
@@ -63,11 +54,7 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
 
 // Display profile
 router.get('/profile-view', checkConnected, (req, res, next) => {
-  User.findById(req.user._id)
-    .then((userFromDB) => {
-      res.render('paws/profile-view', { userFromDB })
-    })
-    .catch(next)
+  res.render('paws/profile-view', { user: req.user })
 })
 
 // Routes to display each place
@@ -76,7 +63,8 @@ router.get('/category/:category', (req, res, next) => {
   Place.find({ category: req.params.category })
     .then((places) => {
       res.render('paws/places', {
-        places
+        places,
+        category: req.params.category
       })
     })
     .catch(next)
@@ -112,32 +100,7 @@ router.get('/confirmation-place', (req,res,next)=> {
   res.render('paws/confirmation-place')
 })
 
-router.get('/admin', (req, res, next) => {
-  Place.find()
-    .then((places) => {
-      //console.log(places)
-      const filteredPlaces = places.filter(one => one.isValidated === false)
-      //console.log(places)
-      res.render('paws/admin', { filteredPlaces })
-    })
-    .catch(next)
-})
 
-router.get('/admin/:placeId/delete', (req,res,next)=> { 
-  Place.findByIdAndDelete(req.params.placeId)
-    .then(() => {
-      res.redirect('/admin')
-    })
-    .catch(next)
-})
-
-router.get('/admin/:placeId/validate', (req,res,next)=> { 
-  Place.findByIdAndUpdate(req.params.placeId, {isValidated: true})
-    .then(() => {
-      res.redirect('/admin')
-    })
-    .catch(next)
-})
 
 
 router.post('/upload', uploadCloud.single('photo'), (req, res) => {

@@ -5,48 +5,69 @@
 
     <form class="sign">
       <h1>User Profile</h1>
-      <div class="form-group">
-        <label for="exampleFormControlFile1" class="view-profile"><img src="{{userFromDB.picture}}"></label>
-      </div>
-      <br>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th>Username</th>
+            <td>{{user.username}}</td>
+          </tr>
+          <tr>
+            <th>Picture</th>
+            <td><img class="profile-img" src="{{user.picture}}"/></td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <td>{{user.name}}</td>
+          </tr>
+          <tr>
+            <th>lastname</th>
+            <td>{{user.lastname}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Name</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.name}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.name}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Last Name</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.lastName}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.lastName}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">@</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.username}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.username}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Location</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.location}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.location}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Description</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.description}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.description}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Pet Name</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.pet}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.pet}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">Number of Pets</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.numbPet}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.numbPet}}</label>
       </div>
       <br>
       <div class="form-group">
         <span class="input-group-text" style="display:initial;" id="inputGroupPrepend">About Pet</span>
-        <label for="exampleFormControlFile1" class="view-profile">{{userFromDB.aboutPet}}</label>
+        <label for="exampleFormControlFile1" class="view-profile">{{user.aboutPet}}</label>
       </div>
     </form>
   </section>

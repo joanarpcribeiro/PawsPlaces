@@ -90,3 +90,14 @@ img {
   margin-left: 30vh; } }
 #inputGroupPrepend {
     margin-top: 20px;}  
+
+.profile-img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.crop {
+  object-fit: cover;
+}
