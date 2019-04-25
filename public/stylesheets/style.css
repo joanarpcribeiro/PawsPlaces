@@ -7119,4 +7119,13 @@ button:hover {
 .crop {
   object-fit: cover; }
 
+.form-user-profile {
+  margin: 40px;
+  max-height: 1000px;
+  max-width: 100%;
+  width: 100%; }
+  .form-user-profile table {
+    height: 800px;
+    width: 100%; }
+
 /*# sourceMappingURL=style.css.map */
