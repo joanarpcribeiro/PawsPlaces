@@ -16,12 +16,6 @@
 {{!-- </div> --}}
 
 <section class="sign m-auto">
-  <div class="container">
-  <h4 class="m-auto">Upload your photo</h4>
-  <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline m-auto">
-    <input type="file" name="photo" class="form-control">
-    <input type="submit" value="Save" class="btn btn-outline-primary">
-  </form>
 
   <form action="/profile-edit" method="post">
     <h2 class="m-auto">Edit your profile</h2>
@@ -85,8 +79,7 @@
         <tr>
           <th class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</th>
           <td><select value="{{user.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-              <option selected>Choose...</option>
-              <option>1</option>
+              <option selected>1</option>
               <option>2</option>
               <option>3</option>
               <option>More</option>
@@ -120,11 +113,18 @@
 
         </div>
       </div> --}}
+    <br>
+     <div class="container m-auto">
+      <h4 class="m-auto">Upload your photo</h4>
+      <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline m-auto">
+        <input type="file" name="photo" class="form-control">
+        <input type="submit" value="Save" class="btn btn-outline-primary">
+      </form>
+    </div>
+    <div>
       <br>
-      <div>
-        <br>
-        <button class="btn btn-primary" type="submit">Save</button>
-      </div>
+      <button class="btn btn-primary" type="submit">Save</button>
+    </div>
   </form>
-</div>
+  </div>
 </section>
