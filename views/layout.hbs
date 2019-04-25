@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Paws.Places</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 
 <body>
@@ -14,47 +15,48 @@
     <span>
       <a href="/"> <img src="/images/P/new.paws.png" class="img-fluid d-flex align-items-center"
           style="height:90px; background-color: #a8c6ce; margin: 0 auto;" alt="paws"></a>
-    </span> 
-    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-center align-middle;" style="max-height: 55px;">
+    </span>
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-center align-middle;"
+      style="max-height: 55px;">
       {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> --}}
-        {{!-- <span class="navbar-toggler-icon"></span> --}}
+      {{!-- <span class="navbar-toggler-icon"></span> --}}
       {{!-- </button> --}}
       {{!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-evenly;"> --}}
-        <div class="navbar-nav">
-      
-          <span class="sr-only">(current)</span></a>
-          {{#if isAdmin}}
-          <a href="/admin" class="text-decoration-none navbar-layout-a nav-item nav-link">Validate</a>
-          {{/if}}
+      <div class="navbar-nav">
 
-          {{#if isConnected}}
-          <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item nav-link">Profile</a>
-          <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item nav-link">Add a place</a>
-          <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign Out</a>
+        <span class="sr-only">(current)</span></a>
+        {{#if isAdmin}}
+        <a href="/admin" class="text-decoration-none navbar-layout-a nav-item nav-link">Validate</a>
+        {{/if}}
 
-          {{else}}
-          <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item nav-link">Log in</a>
-          <a href="/auth/sign-up" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign up</a>
-          {{/if}}
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-decoration-none navbar-layout-a nav-item nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Category
-            </a>  
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="nav-item nav-link dropdown-item" href="/category/Restaurant">Restaurants</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Garden">Gardens</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Accomodation">Accomodation</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Dog grooming">Dog grooming</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Public Transportation">Public Transportation</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Veterinarian">Veterinarian</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Pet shop">Pet shop</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Hospital">Hospital</a>
-              <a class="nav-item nav-link dropdown-item" href="/category/Shopping">Shopping</a>
-            </div>
-          </li>
+        {{#if isConnected}}
+        <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item nav-link">Profile</a>
+        <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item nav-link">Add a place</a>
+        <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign Out</a>
+
+        {{else}}
+        <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item nav-link">Log in</a>
+        <a href="/auth/sign-up" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign up</a>
+        {{/if}}
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-decoration-none navbar-layout-a nav-item nav-link" href="#"
+            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="nav-item nav-link dropdown-item" href="/category/Restaurant">Restaurants</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Garden">Gardens</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Accomodation">Accomodation</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Dog grooming">Dog grooming</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Public Transportation">Public Transportation</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Veterinarian">Veterinarian</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Pet shop">Pet shop</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Hospital">Hospital</a>
+            <a class="nav-item nav-link dropdown-item" href="/category/Shopping">Shopping</a>
+          </div>
+        </li>
     </nav>
   </section>
   {{{body}}}
