@@ -7,28 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Paws.Places</title>
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" --}}
-  {{!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
 </head>
 
 <body>
-  <section style="widht: 100%; background-color: #a8c6ce;">
+  <section style="widht: 100%; background-color: #a8c6ce; ">
     <span>
       <a href="/"> <img src="/images/P/new.paws.png" class="img-fluid d-flex align-items-center"
           style="height:90px; background-color: #a8c6ce; margin: 0 auto;" alt="paws"></a>
-    </span>
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-evenly;">
+    </span> 
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-center align-middle;" style="max-height: 55px;">
+      {{!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> --}}
+        {{!-- <span class="navbar-toggler-icon"></span> --}}
+      {{!-- </button> --}}
+      {{!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="justify-content: space-evenly;"> --}}
         <div class="navbar-nav">
-          
+      
           <span class="sr-only">(current)</span></a>
           {{#if isAdmin}}
           <a href="/admin" class="text-decoration-none navbar-layout-a nav-item nav-link">Validate</a>
           {{/if}}
+
           {{#if isConnected}}
           <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item nav-link">Profile</a>
           <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item nav-link">Add a place</a>
@@ -38,6 +37,7 @@
           <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item nav-link">Log in</a>
           <a href="/auth/sign-up" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign up</a>
           {{/if}}
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-decoration-none navbar-layout-a nav-item nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">

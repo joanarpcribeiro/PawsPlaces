@@ -13,13 +13,14 @@ body {
 
 button:hover {
   border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(158, 124, 124);}
+  background-color: rgb(80, 63, 64);
+}
 
 .navbar-layout {
   height: 85px; 
-  border-bottom:1px solid rgba(16, 41, 82, 0.075);
+  border-bottom:1px solid rgba(71, 46, 30, 0.075);
   img {
-  height: 10vh; 
+  height: 10vh;   
   padding-right: 125vh; 
   padding-bottom: 30px;}   }
 
@@ -51,7 +52,7 @@ button:hover {
   background-color: white; 
   border: 1px solid white;
   padding: 10px;
-  box-shadow: 5px 10px #888888;
+  // box-shadow: 5px 10px #888888;
   h2{
     padding: 30px; 
     font-size: 45px; 
@@ -60,7 +61,7 @@ button:hover {
     #form-container { margin-left: 90px; 
     padding-top: 40px;}
     #username, #password {color: white; 
-    background-color: #b4888b; 
+    background-color: #d2b48c; 
     border: 1px solid black; 
     height: 40px; 
     width: 300px;}

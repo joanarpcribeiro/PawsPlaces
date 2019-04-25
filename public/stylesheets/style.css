@@ -7026,11 +7026,11 @@ body {
 
 button:hover {
   border: 1px solid white;
-  background-color: #9e7c7c; }
+  background-color: #503f40; }
 
 .navbar-layout {
   height: 85px;
-  border-bottom: 1px solid rgba(16, 41, 82, 0.075); }
+  border-bottom: 1px solid rgba(71, 46, 30, 0.075); }
   .navbar-layout img {
     height: 10vh;
     padding-right: 125vh;
@@ -7065,8 +7065,7 @@ button:hover {
   margin-top: 40px;
   background-color: white;
   border: 1px solid white;
-  padding: 10px;
-  box-shadow: 5px 10px #888888; }
+  padding: 10px; }
   .sign h2 {
     padding: 30px;
     font-size: 45px;
@@ -7078,7 +7077,7 @@ button:hover {
     padding-top: 40px; }
   .sign #username, .sign #password {
     color: white;
-    background-color: #b4888b;
+    background-color: #d2b48c;
     border: 1px solid black;
     height: 40px;
     width: 300px; }
