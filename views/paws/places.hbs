@@ -1,4 +1,4 @@
-<h1>{{places.category}}</h1>
+<h1>All {{category}}s</h1>
 
 {{!-- {{#each places}}
     name: {{this.name}}
@@ -22,9 +22,9 @@
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">
-            <p>{{this.address}}</p>
-            <p>{{this.postCode}}</p>
-            <p>{{this.neighbourhood}}</p>
+            <p><a target="_blank" href="https://www.google.com/maps/place/{{this.address}}, {{this.postCode}}, {{this.neighbourhood}}">{{this.address}} <br>
+            {{this.postCode}} <br>
+            {{this.neighbourhood}}</a></p>
         </li>
         <li class="list-group-item">{{this.contactNumb}}</li>
     </ul>

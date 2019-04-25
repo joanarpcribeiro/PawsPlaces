@@ -8,36 +8,30 @@
 
       <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="text" name="name">
-        <input type="file" name="photo" value="{{userFromDB.picture}}">
+        <input type="file" name="photo" value="{{user.picture}}">
         <input type="submit" value="Save">
       </form>
       {{!-- <input action="/upload" method="post" enctype="multipart/form-data" name="picture" type="file"
-        class="form-control-file" id="exampleFormControlFile1" value="{{userFromDB.picture}}"> --}}
+        class="form-control-file" id="exampleFormControlFile1" value="{{user.picture}}"> --}}
 {{!-- </div> --}}
 
 <section class="sign">
   <h2>Upload your photo</h2>
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <input type="text" name="name">
-    <input type="file" name="photo">
-    <input type="submit" value="Save">
+  <form action="/upload" method="post" enctype="multipart/form-data" class="form-inline">
+    <input type="file" name="photo" class="form-control">
+    <input type="submit" value="Save" class="btn btn-outline-primary">
   </form>
 
-<section>
-  {{#each newUser}}
-  <h3>{{ this.name }}</h3>
-  <img src="{{ this.path }}" alt="{{ this.originalName }}" />
-  {{/each}}
-</section>
-
-<div class="md-4 mb-3">
+  <form action="/profile-edit" method="post">
+    <h2 class="mt-5">Edit your profile</h2>
+    <div class="md-4 mb-3">
       <label for="validationCustomUsername">Username</label>
       <div class="input-group" style="  width: 33%;">
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend">@</span>
         </div>
         <input name="username" type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
-          value="{{userFromDB.username}}" aria-describedby="inputGroupPrepend" required>
+          value="{{user.username}}" aria-describedby="inputGroupPrepend" required>
         <div class="invalid-feedback">
           Please choose a username.
         </div>
@@ -47,7 +41,7 @@
       <div class="col-md-4 mb-3">
         <label for="validationCustom01">First name</label>
         <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="First name"
-          value="{{userFromDB.name}}">
+          value="{{user.name}}">
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -55,14 +49,14 @@
       <div class="col-md-4 mb-3">
         <label for="validationCustom02">Last name</label>
         <input name="lastName" type="text" class="form-control" id="validationCustom02" placeholder="Last name"
-          value="{{userFromDB.lastName}}">
+          value="{{user.lastName}}">
       </div>
     </div>
     <div class="form-row">
       <div class="col-md-6 mb-3">
         <label for="validationCustom03">City</label>
         <input name="location" type="text" class="form-control" id="validationCustom03" placeholder="City"
-          value="{{userFromDB.location}}">
+          value="{{user.location}}">
         <div class="invalid-feedback">
           Please provide a valid city.
         </div>
@@ -71,21 +65,21 @@
     <br>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" value="{{userFromDB.description}}">Description</span>
+        <span class="input-group-text" value="{{user.description}}">Description</span>
       </div>
       <textarea name="description" class="form-control" aria-label="With textarea"></textarea>
     </div>
     <br>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" value="{{userFromDB.aboutPet}}">About My Pet</span>
+        <span class="input-group-text" value="{{user.aboutPet}}">About My Pet</span>
       </div>
       <textarea name="aboutPet" class="form-control" aria-label="With textarea"></textarea>
     </div>
     <div class="form-row align-items-center">
       <div class="col-auto my-1">
         <label class="mr-sm-2" for="inlineFormCustomSelect">How many pets do you have?</label>
-        <select value="{{userFromDB.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <select value="{{user.numbPet}}" name="numbPet" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
           <option selected>Choose...</option>
           <option>1</option>
           <option>2</option>
@@ -98,6 +92,6 @@
       <br>
       <button class="btn btn-primary" type="submit">Save</button>
     </div>
-</form>
+  </form>
 
 </section>
