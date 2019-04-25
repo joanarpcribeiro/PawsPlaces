@@ -3,24 +3,19 @@ const multer  = require('multer');
 const router = express.Router();
 const Place = require("../models/Place");
 const User = require('../models/User'); 
-const { checkConnected, checkAdmin, checkRole } = require('../middlewares')
-const uploadCloud = require('../config/cloudinary')
+const uploadCloud = require('../config/cloudinary');
 
 
 /* GET home page */
 router.get('/', (req, res, next) => {
-  Place.find({isValidated: true})
-    .limit(6)
-    .then(places => {
-      res.render('paws/home-page', { places });
-    })
-});
+      res.render('paws/home-page');
+})
 
-router.get('/profile-edit', checkConnected, (req, res, next) => {
+router.get('/profile-edit', (req, res, next) => {
   res.render('paws/profile-edit', { user: req.user })
 })
 
-router.post('/profile-edit', checkConnected, (req, res, next) => {
+router.post('/profile-edit', (req, res, next) => {
   const { username,
     name,
     lastName,
@@ -53,14 +48,14 @@ router.post('/profile-edit', checkConnected, (req, res, next) => {
 
 
 // Display profile
-router.get('/profile-view', checkConnected, (req, res, next) => {
+router.get('/profile-view', (req, res, next) => {
   res.render('paws/profile-view', { user: req.user })
 })
 
 // Routes to display each place
 
 router.get('/category/:category', (req, res, next) => {
-  Place.find({ category: req.params.category })
+  Place.find({ category: req.params.category, isValidated: true })
     .then((places) => {
       res.render('paws/places', {
         places,
@@ -99,8 +94,6 @@ router.post('/create-place', (req, res, next) => {
 router.get('/confirmation-place', (req,res,next)=> {
   res.render('paws/confirmation-place')
 })
-
-
 
 
 router.post('/upload', uploadCloud.single('photo'), (req, res) => {
