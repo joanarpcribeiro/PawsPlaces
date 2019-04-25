@@ -4,33 +4,33 @@
 
 {{!-- Send the data to "POST /create-book" --}}
 <form action="/create-place" method="post" enctype="multipart/form-data">
-  <p></p> Name
+  <p>Name (required)</p> 
   <input type="text" name="name" class="form-control" required>
   <br>
-  <p></p> Address
+  <p>Address (required)</p> 
   <input type="text" name="address" class="form-control" required>
   <br>
-  <p></p> Post Code
+  <p>Post Code</p> 
   <input type="text" name="postCode" class="form-control">
   <br>
-  <p></p> Description
+  <p>Description</p> 
   <input type="text" name="description" min="1" max="20" class="form-control">
   <br>
-  <p></p> Neighbourhood
+  <p>Neighbourhood</p> 
   <input type="text" name="neighbourhood" class="form-control">
   <br>
-  Picture
+  <p>Picture (required) </p>
   <input type="file" name="photo" class="form-control" required>
   <br>
-  Contact Number:
+  <p>Contact Number:</p>
   <input type="text" name="contactNumb" class="form-control">
   <br>
-  Website:
+  <p>Website</p>
   <input type="link" name="websiteURL" class="form-control">
   <br>
   <div class="form-row align-items-center">
       <div class="col-auto my-1">
-        <label class="mr-sm-2" for="inlineFormCustomSelect">What kind of place is it?</label>
+        <label class="mr-sm-2" for="inlineFormCustomSelect">What kind of place is it? (required) </label>
         <select name="category" class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
           <option selected>Choose...</option>
           <option value="Restaurant">Restaurant</option>
@@ -65,7 +65,7 @@
       </div>
   </div>
   <br>
-  Suggestions about location:
+  <p>Suggestions about location:</p> 
   <input type="text" name="warning" min="1" max="20" class="form-control">
   <br>
   <button type="submit" class="btn btn-primary">Create!</button>
