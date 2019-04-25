@@ -76,7 +76,7 @@ router.get('/category/:category', (req, res, next) => {
   Place.find({ category: req.params.category })
     .then((places) => {
       res.render('paws/places', {
-        places
+        places: places
       })
     })
     .catch(next)

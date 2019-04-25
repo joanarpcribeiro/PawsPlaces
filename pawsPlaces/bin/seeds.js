@@ -387,15 +387,14 @@ const places = [
     contactNumb: 217270945,
     websiteURL: "https://www.vetlaranjeiras.com/m/pt/home/",
     category: "Hospital",
-    websiteURL: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
     description: "",
     warning: "WebsiteURL in Portuguese Only. Has 24h emergency service. Always contact the place directly, to confirm details are up to date.",
   },
   // Public Transportation
   {
     name: "CP",
-    address: "not applicable",
-    postCode: "not applicable",
+    address: "/",
+    postCode: "",
     neighbourhood: "Mainland Portugal",
     pictureURL: "/images/D/cp.jpg",
     contactNumb: 707210220,
@@ -406,8 +405,8 @@ const places = [
   },
   {
     name: "Carris",
-    address: "not applicable",
-    postCode: "not applicable",
+    address: "/",
+    postCode: "",
     neighbourhood: "Lisbon district",
     pictureURL: "/images/D/carris.png",
     contactNumb: 213613000,
@@ -418,8 +417,8 @@ const places = [
   },
   {
     name: "Rede Expressos",
-    address: "not applicable",
-    postCode: "not applicable",
+    address: "/",
+    postCode: "",
     neighbourhood: "Mainland Portugal",
     pictureURL: "/images/D/rede-expressos.jpg",
     contactNumb: 707223344,
@@ -430,8 +429,8 @@ const places = [
   },
   {
     name: "Fertagus",
-    address: "not applicable",
-    postCode: "not applicable",
+    address: "/",
+    postCode: "",
     neighbourhood: "Lisbon district - North/South Railway Axis",
     pictureURL: "/images/D/fertagus.jpg",
     contactNumb: 211066363,
@@ -442,8 +441,8 @@ const places = [
   },
   {
     name: "Transtejo Soflusa",
-    address: "not applicable",
-    postCode: "not applicable",
+    address: "/",
+    postCode: "",
     neighbourhood: "Lisbon district",
     pictureURL: "/images/D/ttsl.jpg",
     contactNumb: 808203050,
@@ -454,8 +453,8 @@ const places = [
   },
   {
     name: "Rodoviária de Lisboa",
-    address: "not available",
-    postCode: "not available",
+    address: "/",
+    postCode: "",
     neighbourhood: "Lisbon",
     pictureURL: "/images/D/rl.png",
     contactNumb: 217928180,
@@ -496,7 +495,7 @@ const places = [
     contactNumb: 935893451,
     websiteURL: "https://www.petoutlet.pt/",
     category: "Pet shop",
-    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+    warning: "Open from Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
   },
   {
     name: "PETOUTLET – LISBOA-FANQUEIROS",
@@ -507,7 +506,7 @@ const places = [
     contactNumb: 934034213,
     websiteURL: "https://www.petoutlet.pt/",
     category: "Pet shop",
-    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+    warning: "Open from Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
   },
   {
     name: "PETOUTLET – OEIRAS",
@@ -518,7 +517,7 @@ const places = [
     contactNumb: 938566743,
     websiteURL: "https://www.petoutlet.pt/",
     category: "Pet shop",
-    warning: "Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
+    warning: "Open from Monday to Friday - from 9.30am until 7.30pm; Saturday - from 9am until 6pm; Sunday: closed"
   },
   // Dog grooming
   {
@@ -530,7 +529,7 @@ const places = [
     contactNumb: 936258503,
     websiteURL: "http://cabeleireirodocao.com/",
     category: "Dog grooming",
-    warning: "Monday to Saturday - 10am-1pm / 3pm-8pm - Sunday - closed"
+    warning: "Open from Monday to Saturday - 10am-1pm / 3pm-8pm - Sunday - closed"
   },
   {
     name: "Pet & Cia",
@@ -541,7 +540,7 @@ const places = [
     contactNumb: 915255883,
     websiteURL: "https://petecia.pt/",
     category: "Dog grooming",
-    warning: "Require prior appointment - Everyday from 8am until 8pm"
+    warning: "Require prior appointment - Open everyday from 8am until 8pm"
   },
   {
     // SHOPPING
@@ -567,7 +566,7 @@ const places = [
     website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/jardim-mario-soares",
     category: "Garden",
     description: "This garden is also known as 'Jardim do campo grande', it's the biggest garden in the center of Lisbon.",
-    warnings: "None"
+    warnings: ""
   }, 
   {
     name: "Dog Park",
@@ -579,7 +578,7 @@ const places = [
     website: "https://www.jf-estrela.pt/",
     category: "Garden",
     description: "This garden have a WC and a water font.",
-    warnings: "None"
+    warnings: ""
   }, 
   {
     name: "Campo Mártires da Pátria",
@@ -591,7 +590,7 @@ const places = [
     website: "https://www.tripadvisor.pt/Attraction_Review-g189158-d10620496-Reviews-Campo_dos_Martires_da_Patria-Lisbon_Lisbon_District_Central_Portugal.html",
     category: "Garden",
     description: "In this garden you have several obstacles, a water font and a bag dispenser.",
-    warnings: "None"
+    warnings: ""
   }, 
   {
     name: "Jardim Fernando Pessoa",
@@ -603,43 +602,43 @@ const places = [
     website: "http://www.cm-lisboa.pt/zonas/centro/espacos-verdes/info/jardim-fernando-pessa",
     category: "Garden",
     description: "Jardim Fernando Pessoa is a small garden close to the Forúm Lisboa and Avenida de Roma. The name is a tribute for the artist Fernando Pessoa.",
-    warnings: "None"
+    warnings: ""
   }, 
   {
     name: "Parque canino do Parque das Artes e do Desporto",
     address: "Mina de Água, antiga Lixeira da Boba ",
-    postCode: "None",
+    postCode: "",
     neighbourhood: "Amadora, Lisboa",
     pictureURL: "/images/P/image(1).jpg",
     contactNumb: 0000,
     website: "https://www.timeout.pt/lisboa/pt/coisas-para-fazer/parque-das-artes-e-do-desporto",
     category: "Garden",
     description: "A perfect place to take a walk with your best friend",
-    warnings: "None",
+    warnings: "",
   },
   {
     name: "Jardim da Quinta das Conchas",
     address: "Alameda das Linhas de Torres",
-    postCode: "None",
+    postCode: "",
     neighbourhood: "Lumiar, Lisboa",
     pictureURL: "/images/P/ParqueDasConchas.jpg",
     contactNumb: 217594516,
     website: "http://www.cm-lisboa.pt/equipamentos/equipamento/info/parque-da-quinta-das-conchas-e-dos-lilases",
     category: "Garden",
     description: "This garden have a restaurant and many walking areas.",
-    warnings: "None",
+    warnings: "",
   },
   {
     name: "Tapada das Necessidades",
     address: "Calçada Necessidades",
-    postCode: "None",
+    postCode: "",
     neighbourhood: "Estrela, Lisboa",
     pictureURL: "/images/P/TapadaNecessidadesASC.jpg",
     contactNumb: 213932110,
     website: "http://www.cm-lisboa.pt/zonas/centro-historico/espacos-verdes/info/tapada-das-necessidades",
     category: "Garden",
     description: "This is a beautiful garden! You will find here a Lake, a waterfall and a statuary.",
-    warnings: "None",
+    warnings: "",
   },
 
 ]

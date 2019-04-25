@@ -1,9 +1,8 @@
 <body style="background-color: lightgrey;">
-  <section class="sign">
+  <section class="sign" style="width: 900px";>
     <h2>Login</h2>
-    <div>
-      <div>
-        <form action="/auth/sign-in" method="post" id="form-container">
+    <div class="w-100 d-flex justify-content-center">
+        <form class="p-0 m-0" action="/auth/sign-in" style="max-width: 450px;" method="post" id="form-container">
           <label for="username" style="font-size:20px;">Username</label>
           <br>
           <input id="username" type="text" name="username" placeholder="Username">
@@ -24,7 +23,6 @@
             <a href="/auth/sign-up">Signup</a>
           </p>
         </form>
-      </div>
     </div>
   </section>
 </body>

@@ -3,9 +3,9 @@
 // $primary: red;
 
 //PARA RETIRAR
-.testUploadPicture{
-  margin: 10vh
-}
+// .testUploadPicture{
+//   margin: 10vh
+// }
 
 body { 
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -30,7 +30,7 @@ button:hover {
   padding-right: 40px; }
 
 .navbar2hp {
-  height: 90px; 
+  MIN-height: 90px; 
   display: flex; 
   align-items: center; 
   border-bottom:2px solid rgba(0, 0, 0, 0.157); 
@@ -40,20 +40,18 @@ button:hover {
   font-size: 20px;}  }
 .quote{
   position: absolute; 
-  font-size: 55px; 
+  font-size: 5vw; 
   color: rgba(85, 31, 31, 0.767); width: 100%; 
-  margin-top: 16%; 
   text-align: center;
 }
 .sign{
-  width: 30%; 
+  max-width:100%; 
   margin:auto; 
-  margin-top: 8%; 
+  margin-top: 40px; 
   background-color: white; 
   border: 1px solid white;
   padding: 10px;
   box-shadow: 5px 10px #888888;
-  height: 45vh;
   h2{
     padding: 30px; 
     font-size: 45px; 
@@ -65,7 +63,7 @@ button:hover {
     background-color: #b4888b; 
     border: 1px solid black; 
     height: 40px; 
-    width: 400px;}
+    width: 300px;}
     button  {border: 1px solid rgb(93, 93, 93); }
     a {float: right;
     color: rgb(124, 118, 28); } 
