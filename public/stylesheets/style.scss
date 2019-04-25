@@ -8,7 +8,7 @@
 // }
 
 body { 
-  background-color: #458396;
+  // background-color: #A8C6CE;
   height: 100vh;
   font: 14px 'Muli', sans-serif;
   margin:0;}
@@ -33,7 +33,7 @@ button:hover {
   padding-right: 40px; }
 
 .navbar2hp {
-  MIN-height: 90px; 
+  min-height: 90px; 
   display: flex; 
   align-items: center; 
   border-bottom:2px solid rgba(0, 0, 0, 0.157); 
@@ -107,11 +107,11 @@ img {
 
 .form-user-profile{
   margin: 40px;
-  max-height: 1000px;
+  max-height: 600px;
   max-width: 100%;
   width: 100%;
   table {
-    height: 800px ;
+    height: 300px ;
     width: 100%;
   }
 }
@@ -121,4 +121,14 @@ img {
   margin: 20px;
   color: rgb(92, 55, 60);
   font-weight: bold;
+}
+
+.card-style {
+  margin: 18px;
+}
+
+.th-style {
+  font-size: 20px;
+  width: 300px;
+  padding-left: 20px;
 }
