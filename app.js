@@ -81,7 +81,10 @@ require('./passport')(app);
 app.use((req,res,next) => {
   // Define a view variable named `isConnected`
   res.locals.isConnected = !!req.user
-
+  if(req.user) {
+    res.locals.userPicture = req.user.picture
+    res.locals.userName = req.user.username
+  }
   // Define a view variable named `connectedUser`
   res.locals.isAdmin = req.user && req.user.role === 'ADMIN'
   next()
