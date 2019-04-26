@@ -7180,6 +7180,7 @@ button:hover {
 
 .card-disclaimer {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.438); }
+  background-color: rgba(255, 255, 255, 0.438);
+  font-size: 1vw; }
 
 /*# sourceMappingURL=style.css.map */
