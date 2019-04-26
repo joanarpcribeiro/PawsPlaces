@@ -32,17 +32,10 @@
         {{/if}}
 
         {{#if isConnected}}
-<<<<<<< HEAD
         <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link"><img width="40px"
             style="border-radius: 100%;" src="{{userPicture}}" /> {{userName}}</a>
         <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Add a place</a>
         <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Sign Out</a>
-=======
-        <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item nav-link"><img width="40px"
-            style="border-radius: 100%;" src="{{userPicture}}" /> {{userName}}</a>
-        <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item nav-link">Add a place</a>
-        <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item nav-link">Sign Out</a>
->>>>>>> dc6ef58e5ddb1fed5db01b51693c444179fa5020
 
         {{else}}
         <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Log in</a>
