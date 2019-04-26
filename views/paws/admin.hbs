@@ -1,54 +1,105 @@
-<table class="table table-bordered md-4 mb-3 m-auto">
-  <tbody>
-    {{#each filteredPlaces}}
-    <tr>
-    <tr>
-      <th>Location name</th>
-      <td> {{this.name}}</td>
-    </tr>
-    <tr>
-      <th>Address</th>
-      <td>{{this.address}}</td>
-    </tr>
-    <tr>
-      <th>Post Code</th>
-      <td>{{this.postCode}}</td>
-    </tr>
-    <tr>
-      <th>Description</th>
-      <td>{{this.description}}</td>
-    </tr>
-    <tr>
-      <th>Neighbourhood</th>
-      <td> {{this.neighbourhood}}</td>
-    </tr>
-    <tr>
-      <th>Picture</th>
-      <td class="card-container"> <img src="{{this.pictureURL}}" class="imgValidate"></td>
-    </tr>
-    <tr>
-      <th>Contact Number</th>
-      <td>{{this.contactNumb}}</td>
-    </tr>
-    <tr>
-      <th>Website</th>
-      <td>{{this.websiteURL}}</td>
-    </tr>
-    <tr>
-      <th>Category</th>
-      <td>{{this.category}}</td>
-    </tr>
-    <tr>
-      <th>Sub Category</th>
-      <td>{{this.group}}</td>
-    </tr>
-    <tr>
-      <th>Advice</th>
-      <td>{{this.warning}}</td>
-    </tr>
-    <td><a href="/admin/{{this._id}}/validate" class="btn btn-outline-primary">Validate</a></td>
-    <td><a href="/admin/{{this._id}}/delete" class="btn btn-outline-danger">Delete</a></td>
-    </tr>
-    {{/each}}
-  </tbody>
-</table>
+<div class="m-3">
+  <table class="table table-sm table-hover  table-bordered md-4 mb-3 m-auto">
+    <thead class="text-center">
+      <tr>
+        <th>Location name</th>
+        <th>Address</th>
+        <th>Post Code</th>
+        <th>Description</th>
+        <th>Neighbourhood</th>
+        <th>Picture</th>
+        <th>Contact Number</th>
+        <th>Website</th>
+        <th>Category</th>
+        <th>Sub Category</th>
+        <th>Advice</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each filteredPlaces}}
+      <tr>
+        <td> {{this.name}}</td>
+        <td>{{this.address}}</td>
+        <td>{{this.postCode}}</td>
+        <td>{{this.description}}</td>
+        <td> {{this.neighbourhood}}</td>
+        <td>
+          <a href="{{this.pictureURL}}" target="_blank">
+            <img src="{{this.pictureURL}}" class="imgValidate">
+          </a>
+        </td>
+        <td>{{this.contactNumb}}</td>
+        <td>{{this.websiteURL}}</td>
+        <td>{{this.category}}</td>
+        <td>{{this.group}}</td>
+        <td>{{this.warning}}</td>
+        <td>
+          <a href="/admin/{{this._id}}/validate" class="btn btn-sm btn-outline-success">Validate</a>
+          <br>
+          <br>
+          <a href="/admin/{{this._id}}/delete" class="btn btn-sm btn-outline-danger">Delete</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+
+{{!-- <div class="container">
+  <table class="table table-bordered md-4 mb-3 m-auto">
+    <tbody>
+      {{#each filteredPlaces}}
+      <tr>
+      <tr>
+        <th>Location name</th>
+        <td> {{this.name}}</td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td>{{this.address}}</td>
+      </tr>
+      <tr>
+        <th>Post Code</th>
+        <td>{{this.postCode}}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{this.description}}</td>
+      </tr>
+      <tr>
+        <th>Neighbourhood</th>
+        <td> {{this.neighbourhood}}</td>
+      </tr>
+      <tr>
+        <th>Picture</th>
+        <td class="card-container"> <img src="{{this.pictureURL}}" class="imgValidate"></td>
+      </tr>
+      <tr>
+        <th>Contact Number</th>
+        <td>{{this.contactNumb}}</td>
+      </tr>
+      <tr>
+        <th>Website</th>
+        <td>{{this.websiteURL}}</td>
+      </tr>
+      <tr>
+        <th>Category</th>
+        <td>{{this.category}}</td>
+      </tr>
+      <tr>
+        <th>Sub Category</th>
+        <td>{{this.group}}</td>
+      </tr>
+      <tr>
+        <th>Advice</th>
+        <td>{{this.warning}}</td>
+      </tr>
+      <td><a href="/admin/{{this._id}}/validate" class="btn btn-outline-primary">Validate</a></td>
+      <td><a href="/admin/{{this._id}}/delete" class="btn btn-outline-danger">Delete</a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div> --}}
