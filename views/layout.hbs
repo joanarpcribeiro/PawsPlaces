@@ -28,18 +28,18 @@
 
         <span class="sr-only">(current)</span></a>
         {{#if isAdmin}}
-        <a href="/admin" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Validate</a>
+        <a href="/admin" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link">Validate</a>
         {{/if}}
 
         {{#if isConnected}}
-        <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link"><img width="40px"
+        <a href="/profile-view" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link"><img width="40px"
             style="border-radius: 100%;" src="{{userPicture}}" /> {{userName}}</a>
-        <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Add a place</a>
-        <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Sign Out</a>
+        <a href="/create-place" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link">Add a place</a>
+        <a href="/auth/sign-out" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link">Sign Out</a>
 
         {{else}}
-        <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Log in</a>
-        <a href="/auth/sign-up" class="text-decoration-none navbar-layout-a nav-item p-0 nav-link">Sign up</a>
+        <a href="/auth/sign-in" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link">Log in</a>
+        <a href="/auth/sign-up" class="text-decoration-none navbar-layout-a nav-item p-0 pr-5 nav-link">Sign up</a>
         {{/if}}
 
         <li class="nav-item dropdown">
@@ -70,10 +70,8 @@
               </button>
             </p>
             <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil
-                anim
-                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+              <div class="card card-body card-disclaimer">
+                Paws.Places is a website where you can find places to hang out with your best friend. It was designed to work as a community where people can <b>sign up to contribute to its growth, by adding new places that alllow dogs.</b> <br> Paws.Places is not responsible for any misbehavior from the animal that causes any kind of damage to commercial establishments or to their customers. <br> We encourage users to behave with respect when it comes to visiting the places shown on this website.
               </div>
             </div>
           </span>

@@ -7044,7 +7044,7 @@ button:hover {
   padding-right: 40px; }
 
 .navbar2hp {
-  min-height: 90px;
+  min-height: 140px;
   display: flex;
   align-items: center;
   border-bottom: 2px solid rgba(0, 0, 0, 0.157);
@@ -7175,6 +7175,10 @@ button:hover {
 .disclaimer {
   display: flex;
   justify-content: center;
-  margin: auto; }
+  margin: 0; }
+
+.card-disclaimer {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.438); }
 
 /*# sourceMappingURL=style.css.map */
