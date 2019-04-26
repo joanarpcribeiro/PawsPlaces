@@ -7172,4 +7172,9 @@ button:hover {
 .border-box {
   border: 1px solid rgba(131, 131, 131, 0.418); }
 
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  margin: 0; }
+
 /*# sourceMappingURL=style.css.map */
