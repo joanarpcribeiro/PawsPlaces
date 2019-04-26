@@ -182,7 +182,12 @@ img {
 // }
 
 .disclaimer{
-display: flex;
-justify-content: center;
-margin: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.card-disclaimer {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.438);
 }
